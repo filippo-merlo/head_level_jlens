@@ -1,0 +1,58 @@
+{
+ "meta": {
+  "timestamp": "2026-09-15T22:30:17+00:00",
+  "git": {
+   "sha": "24e36a0489ad77dbed5ad5d5fb0a860da187e023",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "Qwen/Qwen3.5-4B",
+  "lens_key": "qwen3.5-4b",
+  "anchor": "zin (o_proj input)",
+  "d_model": 2560,
+  "d_source": 4096,
+  "n_heads": 16,
+  "head_dim": 256,
+  "dtype": "bfloat16",
+  "dim_batch": 32,
+  "max_seq_len": 128,
+  "skip_first": 16,
+  "layers": [
+   3,
+   7,
+   11,
+   15,
+   19,
+   23,
+   27,
+   31
+  ],
+  "shard": "a0",
+  "compile": false,
+  "corpus_size": 1400,
+  "corpus_seed": 0,
+  "prompt_offset": 0,
+  "n_prompts_requested": 250
+ },
+ "result": {
+  "prompts_fitted": 250,
+  "prompts_skipped": 0,
+  "prompts_offered": 250,
+  "final_mean_rel_change": 0.008540434762835503,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n250_a0.pt",
+  "lens_sha256": "4624a11cd0733049c3308af05216318607d9a4293f64f13d3c090e19057d55d5",
+  "convergence_csv": "/project/fmerlo/head_level_jlens/results/fit/qwen3.5-4b_a0_convergence.csv"
+ },
+ "wo_gate": {
+  "reference": "W_O",
+  "median_row_cosine_vs_W_O": 0.9041562676429749,
+  "median_row_cosine_vs_identity": null,
+  "min_vs_W_O": 0.8,
+  "max_vs_identity": 0.1,
+  "PASS": true
+ },
+ "PASS": true
+}

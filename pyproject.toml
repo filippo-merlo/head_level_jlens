@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "head-level-jlens"
+version = "0.1.0"
+description = "Reading individual attention heads through the Jacobian lens, on Llama-3.1-8B."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "jlens",
+    "torch>=2.9",
+    "transformers>=5.8,<6",
+    "huggingface-hub>=0.35",
+    "datasets>=3.0",
+    "pyarrow>=15",
+    "numpy>=2.0",
+    "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.9"]
+
+# jlens (the jacobian-lens reference implementation) is not on PyPI, and it must be an
+# *editable* checkout rather than a wheel: src/evals.py and src/tasks.py read the eval and
+# task JSON from `data/` at the repo root, which is outside the installed package and so
+# ships with no wheel. `git clone https://github.com/anthropics/jacobian-lens.git
+# vendor/jacobian-lens` puts it where this expects; vendor/ is gitignored and never edited.
+[tool.uv.sources]
+jlens = { path = "vendor/jacobian-lens", editable = true }
+torch = { index = "pytorch-cu130" }
+
+# Pinned to the CUDA 13.0 wheels the fit and both experiments were run under, so the
+# shipped lens and the readouts that cite it come from one toolchain. On a driver that
+# predates CUDA 13.0, repoint this index at the matching build.
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "E741"]
+
+# Marimo cells display their last bare expression by design (the notebook's
+# equivalent of a Jupyter cell's trailing output) -- not a mistake B018 should flag.
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*.py" = ["B018"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[dependency-groups]
+dev = [
+    "altair>=5.5",
+    "marimo>=0.23.16",
+    "vl-convert-python>=1.7",
+]

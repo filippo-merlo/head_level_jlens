@@ -1,0 +1,153 @@
+{
+ "meta": {
+  "timestamp": "2026-09-10T09:36:05+00:00",
+  "git": {
+   "sha": "411380a571d3533bf58680626eabbe926a9843e2",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "lens_key": "llama3.1-8b-it",
+  "jz_path": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n1000.pt",
+  "jz_sha256": "07a9a25aead37574c16829c3569ca1b2be567e7246bd71b14040d102a2caa323",
+  "band_layers": [
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "dtype": "bfloat16",
+  "audits": "Audit of the scoring candidate rule for numeral intermediates in results/read/.",
+  "audited_input": "results/read/llama3.1-8b-it_read.json",
+  "arm_subset_revision": {
+   "timestamp": "2026-09-28T12:50:46.163085+00:00",
+   "source_sha256": "1d2b0cd69e4d29ed230f870d49e0470980b77a79ee9f9d9bf9c2aa562e736297",
+   "note": "Retained the configured analysis arms; their measurements are unchanged."
+  }
+ },
+ "question": "Does the scoring candidate rule accidentally accept bare-space tokens for numeral intermediates?",
+ "finding": "An artefact in the scoring candidate set, not in the transport. src.readout.target_token_ids takes the first token of the space-prefixed spelling; on Llama-3.1 ' 3' -> [' ', '3'], so every digit-form intermediate carries token 220 (the bare space) as a scored candidate, and rank is the min over candidates. Confined to lens-eval-multihop: order-ops has the same spellings but passes single_token_only=True, and the other four sets have no affected slots.",
+ "per_head_pass5_multihop": {
+  "jhead": [
+   0.06989247311827956,
+   0.043010752688172046,
+   0.06451612903225806,
+   0.24731182795698925,
+   0.010752688172043012,
+   0.14516129032258066,
+   0.010752688172043012,
+   0.0,
+   0.20967741935483872,
+   0.10752688172043011,
+   0.06451612903225806,
+   0.07526881720430108,
+   0.053763440860215055,
+   0.2025089605734767,
+   0.3010752688172043,
+   0.26881720430107525,
+   0.043010752688172046,
+   0.010752688172043012,
+   0.10215053763440861,
+   0.021505376344086023,
+   0.08064516129032258,
+   0.053763440860215055,
+   0.2598566308243727,
+   0.3010752688172043,
+   0.3584229390681003,
+   0.25806451612903225,
+   0.0967741935483871,
+   0.11290322580645161,
+   0.2078853046594982,
+   0.14874551971326164,
+   0.010752688172043012,
+   0.010752688172043012
+  ]
+ },
+ "random_direction_null": {
+  "n_directions": 20000,
+  "note": "isotropic Gaussian directions in final-layer coordinates, decoded through the effective unembedding (RMSNorm gain folded in)",
+  "p_rank_le_5_digit_form": 0.00292,
+  "p_rank_le_5_word_form": 3e-05,
+  "uniform_baseline": 4.6781437125748506e-05
+ },
+ "rescored_single_token_only": {
+  "jhead@1": {
+   "shipped_mean": 0.06602822580645162,
+   "fixed_mean": 0.05622759856630824,
+   "shipped_max": 0.21505376344086022,
+   "fixed_max": 0.21505376344086022
+  },
+  "logithead@1": {
+   "shipped_mean": 0.05421146953405018,
+   "fixed_mean": 0.037802419354838704,
+   "shipped_max": 0.23655913978494625,
+   "fixed_max": 0.23655913978494625
+  },
+  "jhead@5": {
+   "shipped_mean": 0.12348790322580644,
+   "fixed_mean": 0.10220654121863798,
+   "shipped_max": 0.3584229390681003,
+   "fixed_max": 0.3010752688172043
+  },
+  "logithead@5": {
+   "shipped_mean": 0.08462141577060932,
+   "fixed_mean": 0.05269937275985663,
+   "shipped_max": 0.25806451612903225,
+   "fixed_max": 0.25806451612903225
+  },
+  "jhead@25": {
+   "shipped_mean": 0.2296706989247312,
+   "fixed_mean": 0.194668458781362,
+   "shipped_max": 0.489247311827957,
+   "fixed_max": 0.46236559139784944
+  },
+  "logithead@25": {
+   "shipped_mean": 0.13670474910394265,
+   "fixed_mean": 0.0852374551971326,
+   "shipped_max": 0.3799283154121863,
+   "fixed_max": 0.3010752688172043
+  }
+ },
+ "scope_across_eval_sets": {
+  "lens-eval-association": {
+   "intermediate_slots": 102,
+   "slots_carrying_bare_space_candidate": 0,
+   "protected_by_single_token_only": false
+  },
+  "lens-eval-multihop": {
+   "intermediate_slots": 103,
+   "slots_carrying_bare_space_candidate": 21,
+   "protected_by_single_token_only": false
+  },
+  "lens-eval-multilingual": {
+   "intermediate_slots": 428,
+   "slots_carrying_bare_space_candidate": 0,
+   "protected_by_single_token_only": false
+  },
+  "lens-eval-order-ops": {
+   "intermediate_slots": 110,
+   "slots_carrying_bare_space_candidate": 55,
+   "protected_by_single_token_only": true
+  },
+  "lens-eval-poetry": {
+   "intermediate_slots": 98,
+   "slots_carrying_bare_space_candidate": 0,
+   "protected_by_single_token_only": false
+  },
+  "lens-eval-typo": {
+   "intermediate_slots": 96,
+   "slots_carrying_bare_space_candidate": 0,
+   "protected_by_single_token_only": false
+  }
+ }
+}

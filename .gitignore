@@ -1,0 +1,57 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+
+# Fitted and derived lenses are gigabytes and regenerable from scripts/; their JSON
+# sidecars are kept. Matched anywhere, not just under results/: a stray RESULTS_ROOT
+# (a pilot run, a scratch dir) would otherwise leave them unignored, and `git add -A`
+# then tries to hash them all.
+*.pt
+*.npz
+*.ckpt.pt
+
+logs/
+!logs/.gitkeep
+
+# Figures saved from notebooks/head_lens_explorer.py. Exploratory by construction --
+# regenerable from the notebook, and their meta.json says which lens bytes and which
+# prompt they came from. Stage figures, if any, belong under results/stage*/.
+results/notebook_figures/
+
+# Crash dumps. An earlier SIGABRT during a fit produced a 3.7 GB one that `git add -A`
+# duly staged; src/corpus.py explains where that abort came from and why it is gone.
+core
+core.*
+
+# graphify: local knowledge graph + skill config, regenerable via `graphify extract .`
+graphify-out/
+.claude/
+
+# Local working material kept out of the repository. head_jlens_paper.{md,tex,pdf} is the
+# published write-up.
+private/
+AGENTS.md
+CLAUDE.md
+.vscode/
+
+# The jlens reference implementation, cloned by the reader per the README's Install section.
+# Upstream's code, not ours: tracked by neither repository, and never edited in place.
+vendor/
+
+# LaTeX build products of head_jlens_paper.tex. head_jlens_paper.pdf is tracked as the
+# published build; everything else a rebuild (pdflatex, latexmk or tectonic) leaves behind
+# is not.
+*.log
+*.aux
+*.out
+*.toc
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# marimo's session cache: the last run's cell outputs, written by `marimo edit/run/export`.
+notebooks/__marimo__/

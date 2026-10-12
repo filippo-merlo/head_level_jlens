@@ -1,0 +1,90 @@
+{
+ "meta": {
+  "timestamp": "2026-08-13T17:54:03+00:00",
+  "git": {
+   "sha": "ecb41fdab8430098d14c20c2151366346ea0f056",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "lens_key": "llama3.1-8b-it",
+  "anchor": "zin (o_proj input)",
+  "d_model": 4096,
+  "d_source": 4096,
+  "n_heads": 32,
+  "head_dim": 128,
+  "dtype": "bfloat16",
+  "dim_batch": 64,
+  "max_seq_len": 128,
+  "skip_first": 16,
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31
+  ],
+  "shard": "a1",
+  "compile": false,
+  "corpus_size": 1400,
+  "corpus_seed": 0,
+  "prompt_offset": 250,
+  "n_prompts_requested": 250
+ },
+ "stopping_rule": {
+  "enabled": false,
+  "min_prompts": 100,
+  "stop_window": 10,
+  "stop_at_delta": 0.002,
+  "reduction": "mean of the trailing window",
+  "provenance": "reverse-engineered from the released config.yaml and convergence traces; Neuronpedia's fit_lens.py is unreleased. Replayed against four published runs in tests/test_fit.py (461/546/844/278, all exact)."
+ },
+ "result": {
+  "prompts_fitted": 250,
+  "prompts_skipped": 0,
+  "prompts_offered": 250,
+  "stopped_early": false,
+  "final_mean_rel_change": 0.014323453418910503,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n250_a1.pt",
+  "lens_sha256": "f592732c47a46d40921889f707053b771bb576cad1df9e53ecdd9ddd5bd5ab0b",
+  "convergence_csv": "/project/fmerlo/head_level_jlens/results/stage2_fit_jz/llama3.1-8b-it_a1_convergence.csv"
+ },
+ "wo_gate": {
+  "median_row_cosine_vs_W_O": 0.866989016532898,
+  "median_row_cosine_vs_identity": -0.00018837205425370485,
+  "min_vs_W_O": 0.8,
+  "max_vs_identity": 0.1,
+  "PASS": true
+ },
+ "PASS": true
+}

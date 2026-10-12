@@ -1,0 +1,43 @@
+{
+ "timestamp": "2026-10-12T11:35:58+00:00",
+ "git": {
+  "sha": "452390c8d32f8e9aa5ec4b64793ad7926a5a9875",
+  "dirty": true
+ },
+ "versions": {
+  "torch": "2.13.0+cu130",
+  "transformers": "5.15.0"
+ },
+ "model": "google/gemma-3-4b-it",
+ "lens_key": "gemma-3-4b-it",
+ "inputs": {
+  "read": {
+   "timestamp": "2026-10-12T11:31:55+00:00",
+   "git": {
+    "sha": "452390c8d32f8e9aa5ec4b64793ad7926a5a9875",
+    "dirty": true
+   }
+  },
+  "write": {
+   "timestamp": "2026-10-12T11:35:36+00:00",
+   "git": {
+    "sha": "452390c8d32f8e9aa5ec4b64793ad7926a5a9875",
+    "dirty": true
+   }
+  }
+ },
+ "swap_summaries": [
+  "/project/fmerlo/head_level_jlens/results/write_swap_sites_clamp/gemma-3-4b-it/summary.json"
+ ],
+ "figures": [
+  "fig1_per_layer_k5",
+  "fig2_per_layer_k25",
+  "fig3_intervention",
+  "fig3_probe_swap",
+  "fig3_swap_lenses",
+  "figS1_per_layer_k1",
+  "figS2_paired_per_layer",
+  "figS3_edit_norm",
+  "figS4_write_norm"
+ ]
+}

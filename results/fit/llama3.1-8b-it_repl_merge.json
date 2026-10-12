@@ -1,0 +1,112 @@
+{
+ "meta": {
+  "timestamp": "2026-08-13T18:23:59+00:00",
+  "git": {
+   "sha": "9d80a09e88b29ed9bb627a26e9f732fe9ca1b0f6",
+   "dirty": false
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "lens_key": "llama3.1-8b-it",
+  "shards": [
+   "r0",
+   "r1",
+   "r2",
+   "r3"
+  ],
+  "shard": "repl",
+  "merge": "n_prompts-weighted mean over disjoint corpus slices"
+ },
+ "shards": {
+  "r0": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 1000,
+   "prompts_fitted": 100,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n100_r0.pt",
+   "lens_sha256": "a308f9d0f81ea5b5a33a26942f28a129075482f4b3c4afc12af8620f66a1352b"
+  },
+  "r1": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 1100,
+   "prompts_fitted": 100,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n100_r1.pt",
+   "lens_sha256": "2f227f485d8f135ceedc5b99f16340e8d4fe11e84ba6c98b8283114f3391b4db"
+  },
+  "r2": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 1200,
+   "prompts_fitted": 100,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n100_r2.pt",
+   "lens_sha256": "73e1c2db1e4852aa9b604fdf5b088012f2e84ddd4ae7de00a71d3a5d9fe398cb"
+  },
+  "r3": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 1300,
+   "prompts_fitted": 100,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n100_r3.pt",
+   "lens_sha256": "c428ec0fb6445283a89d0629575ab71c8a5d27803fe3e50147cc0a72be035a32"
+  }
+ },
+ "result": {
+  "prompts_fitted": 400,
+  "n_layers": 32,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n400_repl.pt",
+  "lens_sha256": "dad5ca312eeff4c6cce6f83b1db6d37dc54bcfeabd083de9b97ca873f864da9d"
+ },
+ "estimator_noise": {
+  "against": "results/lenses/llama3.1-8b-it_Jzfit_n1000.pt",
+  "against_sha256": "07a9a25aead37574c16829c3569ca1b2be567e7246bd71b14040d102a2caa323",
+  "against_n_prompts": 1000,
+  "median_row_cosine_by_layer": {
+   "0": 0.9512866735458374,
+   "1": 0.9567646384239197,
+   "2": 0.966903030872345,
+   "3": 0.9753332734107971,
+   "4": 0.9832028746604919,
+   "5": 0.9861522316932678,
+   "6": 0.9905233979225159,
+   "7": 0.991140604019165,
+   "8": 0.994252622127533,
+   "9": 0.9951187968254089,
+   "10": 0.9955490827560425,
+   "11": 0.9960730075836182,
+   "12": 0.9959882497787476,
+   "13": 0.9965525269508362,
+   "14": 0.9972551465034485,
+   "15": 0.9980510473251343,
+   "16": 0.9986470937728882,
+   "17": 0.9988765120506287,
+   "18": 0.999047040939331,
+   "19": 0.9991645812988281,
+   "20": 0.9992977976799011,
+   "21": 0.9994025826454163,
+   "22": 0.9995288252830505,
+   "23": 0.9996026754379272,
+   "24": 0.9996784925460815,
+   "25": 0.999734103679657,
+   "26": 0.9997693300247192,
+   "27": 0.9998236894607544,
+   "28": 0.999855637550354,
+   "29": 0.9998903870582581,
+   "30": 0.9999326467514038,
+   "31": 0.9999616146087646
+  },
+  "worst_layer": 0,
+  "worst": 0.9512866735458374
+ }
+}

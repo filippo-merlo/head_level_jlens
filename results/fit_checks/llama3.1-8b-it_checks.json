@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "timestamp": "2026-08-13T18:41:25+00:00",
+  "git": {
+   "sha": "bb4dfa4e07523ec42475f69788e60ec3fb5a08c5",
+   "dirty": false
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "lens_key": "llama3.1-8b-it",
+  "dtype": "bfloat16",
+  "fit_prompts": 20,
+  "fit_seed": 0,
+  "eval_prompts": 32,
+  "eval_seed": 1,
+  "dim_batch": 64,
+  "max_seq_len": 128,
+  "skip_first": 16,
+  "fit_layers": [
+   0,
+   8,
+   16,
+   24,
+   31
+  ],
+  "reference_protocol": "published lens, wikitext prompts at eval_seed=1, 32 prompts, max_seq_len=128, readout at positions >= skip_first=16, top-1 agreement against the model's own final-layer logits"
+ },
+ "anchor_consistency": {
+  "relative": {
+   "0": 0.0011350780259817839,
+   "8": 0.00036631833063438535,
+   "16": 0.0001560267264721915,
+   "24": 7.514410390285775e-05,
+   "31": 3.816606476902962e-05
+  },
+  "row_cosine_min": {
+   "0": 0.9999986290931702,
+   "8": 0.9999995231628418,
+   "16": 0.9999996423721313,
+   "24": 0.9999995827674866,
+   "31": 0.9999995827674866
+  },
+  "n_prompts": 20
+ },
+ "wo_gate": {
+  "median_row_cosine_vs_W_O": 0.8680225014686584,
+  "median_row_cosine_vs_identity": -0.00016315971151925623,
+  "min_vs_W_O": 0.8,
+  "max_vs_identity": 0.1,
+  "PASS": true
+ },
+ "published_lens_refit": {
+  "median_row_cosine_by_layer": {
+   "0": 0.6366284489631653,
+   "8": 0.9179959893226624,
+   "16": 0.9770461916923523,
+   "24": 0.9949142932891846
+  },
+  "reported_layers": [
+   8,
+   16,
+   24
+  ],
+  "worst": 0.9179959893226624,
+  "gated": false,
+  "note": "recorded, not gated: noise-limited at this prompt count, and the observed values track the 1/sqrt(n) law calibrated on stage 2b's disjoint replication. See scripts/check_real_model.py."
+ },
+ "published_lens_top1_vs_model": {
+  "reproduced": {
+   "0": 0.0005580357392318547,
+   "8": 0.01648643470252864,
+   "16": 0.09967168385628611,
+   "24": 0.2988931545987725,
+   "30": 0.7403400596231222
+  },
+  "reference": {
+   "0": 0.0005580357,
+   "8": 0.0164864347,
+   "16": 0.0996716839,
+   "24": 0.2988931546,
+   "30": 0.7403400596
+  },
+  "delta": {
+   "0": 3.923185463560602e-11,
+   "8": 2.5286404914393046e-12,
+   "16": -4.37138936160153e-11,
+   "24": -1.227462576025573e-12,
+   "30": 2.3122170844658285e-11
+  },
+  "tolerance": 0.02
+ },
+ "verdict": {
+  "anchor_consistency_row_cosine": true,
+  "wo_gate": true,
+  "published_lens_reproduced": true
+ },
+ "PASS": true
+}

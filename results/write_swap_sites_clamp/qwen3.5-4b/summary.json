@@ -1,0 +1,7513 @@
+{
+ "configuration": {
+  "strength": "alpha",
+  "strengths": [
+   1.0,
+   2.0
+  ],
+  "shard": 0,
+  "n_shards": 3,
+  "lenses": {
+   "J": "J^z head blocks / block Jacobian lens",
+   "L": "W_O head blocks / identity"
+  },
+  "arms": [
+   "J",
+   "L",
+   "J_rand",
+   "L_rand"
+  ],
+  "conditions": [
+   "top_1",
+   "random_1",
+   "bottom_1",
+   "top_8",
+   "random_8",
+   "bottom_8",
+   "top_16",
+   "random_16",
+   "bottom_16",
+   "top_32",
+   "random_32",
+   "bottom_32",
+   "top_64",
+   "random_64",
+   "bottom_64",
+   "active",
+   "random_active",
+   "bottom_active"
+  ],
+  "metrics": [
+   "success",
+   "probability",
+   "kl",
+   "top_id",
+   "edit_norm",
+   "rank"
+  ],
+  "layers": [
+   3,
+   7,
+   11,
+   15,
+   19,
+   23,
+   27,
+   31
+  ],
+  "reference_layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ],
+  "band_layers": [
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "workspace_depth": [
+   0.38,
+   0.92
+  ],
+  "scope": "every position",
+  "coords": "clamp",
+  "edit": "clamped two-frame coordinate swap, V^+ x <- c + alpha (sigma(c) - c) with c from the clean pass",
+  "n_trials_total": 193,
+  "code_sha256": {
+   "scripts/write_swap_sites.py": "512352820cd556d431f0e78e3dbd520674be165dc5f32fdef36dae2b918fa981",
+   "scripts/write.py": "c70e39851723d162f685601d4bdeff1c01dab757159f7f7de0c7d7c7b3260c62",
+   "src/swap.py": "8a36760a4e3415db4a5c8fe246b2cd6d15b054f7e176a6c5fed93ac9a286e62f",
+   "src/sites.py": "254995950b601405a261df18a5ed85f046f2dd7cc1055bdebd588f5eb9a97454",
+   "src/hooks.py": "f800b8422d3ff3c47847d45ee857d8ca136828abe46f1c51478f1bc44bddc796",
+   "src/heads.py": "22c200da3ee2e360a4ea042845d62b51b955e5fbf8ab9e4789b0ac17e8171f53",
+   "src/tasks.py": "a184d9ca0275b4e1d4b4c1dd75c0a7be6544b37ac07bc765f9fe7ab03a49bd45",
+   "src/model.py": "20e9c2822672fae426f3a59ed326304b4d02a1811e60e7bc99d12b1e4ee686b7"
+  }
+ },
+ "selection": {
+  "probe-swap": {
+   "n_active_median": {
+    "J": 17.0,
+    "L": 8.0
+   },
+   "mean_top_overlap": {
+    "top_1": 0.32075471698113206,
+    "top_8": 3.3207547169811322,
+    "top_16": 6.773584905660377,
+    "top_32": 14.924528301886792,
+    "top_64": 40.22641509433962,
+    "active": 5.433962264150943
+   }
+  },
+  "verbal-report": {
+   "n_active_median": {
+    "J": 16.0,
+    "L": 13.0
+   },
+   "mean_top_overlap": {
+    "top_1": 0.07142857142857142,
+    "top_8": 3.2142857142857144,
+    "top_16": 5.785714285714286,
+    "top_32": 12.428571428571429,
+    "top_64": 37.142857142857146,
+    "active": 5.428571428571429
+   }
+  }
+ },
+ "rows": [
+  {
+   "task": "probe-swap",
+   "alpha": 1.0,
+   "n_trials": 53,
+   "cells": {
+    "top_1": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004417432006448507,
+      "edit_norm": 1.8051244020462036
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0025900807231664658,
+      "edit_norm": 1.3991529941558838
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0010950167197734118,
+      "edit_norm": 1.8051244020462036
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0010478822514414787,
+      "edit_norm": 1.3991529941558838
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.012325044721364975,
+      "edit_norm": 2.400622844696045
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004903871100395918,
+      "edit_norm": 2.419421672821045
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.001026491867378354,
+      "edit_norm": 2.400623083114624
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0010801417520269752,
+      "edit_norm": 2.419421672821045
+     }
+    },
+    "random_1": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0006367083988152444,
+      "edit_norm": 0.5955232381820679
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0007478763582184911,
+      "edit_norm": 0.7314636707305908
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0007127910503186285,
+      "edit_norm": 0.5955232381820679
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008763325749896467,
+      "edit_norm": 0.7314636707305908
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0006367083988152444,
+      "edit_norm": 0.5955232381820679
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0007478763582184911,
+      "edit_norm": 0.7314636707305908
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0007127910503186285,
+      "edit_norm": 0.5955232381820679
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008763325749896467,
+      "edit_norm": 0.7314636707305908
+     }
+    },
+    "bottom_1": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002087837317958474,
+      "edit_norm": 1.9294224977493286
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0020094786304980516,
+      "edit_norm": 1.7959043979644775
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008576413965784013,
+      "edit_norm": 1.9294224977493286
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008318711770698428,
+      "edit_norm": 1.7959041595458984
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0024177399463951588,
+      "edit_norm": 1.9573558568954468
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0028449210803955793,
+      "edit_norm": 2.0875980854034424
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0009724149713292718,
+      "edit_norm": 1.9573558568954468
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008579029235988855,
+      "edit_norm": 2.0875980854034424
+     }
+    },
+    "top_8": {
+     "J/J": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.0500338077545166,
+      "edit_norm": 5.491592884063721
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.013392752967774868,
+      "edit_norm": 4.82100248336792
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0026000672951340675,
+      "edit_norm": 5.5827741622924805
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0017218509456142783,
+      "edit_norm": 4.843931198120117
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.06770654767751694,
+      "edit_norm": 6.137782096862793
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.025409506633877754,
+      "edit_norm": 5.889900207519531
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0026619944255799055,
+      "edit_norm": 6.218977928161621
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002333673182874918,
+      "edit_norm": 5.918150901794434
+     }
+    },
+    "random_8": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0073378244414925575,
+      "edit_norm": 3.574040651321411
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004132503643631935,
+      "edit_norm": 3.4008853435516357
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0013940983917564154,
+      "edit_norm": 3.5731351375579834
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.001290041022002697,
+      "edit_norm": 3.400446653366089
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0073378244414925575,
+      "edit_norm": 3.574040651321411
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004132503643631935,
+      "edit_norm": 3.4008853435516357
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0013940983917564154,
+      "edit_norm": 3.5731351375579834
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.001290041022002697,
+      "edit_norm": 3.400446653366089
+     }
+    },
+    "bottom_8": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011576864868402481,
+      "edit_norm": 4.661725044250488
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0068572633899748325,
+      "edit_norm": 4.396120548248291
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018012290820479393,
+      "edit_norm": 4.589972496032715
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0016862526535987854,
+      "edit_norm": 4.363983154296875
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.008469308726489544,
+      "edit_norm": 4.008462905883789
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007787185255438089,
+      "edit_norm": 4.051253795623779
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0014540470438078046,
+      "edit_norm": 3.9442999362945557
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0015857834368944168,
+      "edit_norm": 4.010059833526611
+     }
+    },
+    "top_16": {
+     "J/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.11401934921741486,
+      "edit_norm": 7.025478839874268
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.02707912027835846,
+      "edit_norm": 6.413379669189453
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003423763904720545,
+      "edit_norm": 7.18471097946167
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0021138787269592285,
+      "edit_norm": 6.453327178955078
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.09059137850999832,
+      "edit_norm": 7.906892776489258
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.03329911828041077,
+      "edit_norm": 7.732250690460205
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003446317510679364,
+      "edit_norm": 8.053049087524414
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0027671100106090307,
+      "edit_norm": 7.768321514129639
+     }
+    },
+    "random_16": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.010926112532615662,
+      "edit_norm": 5.3849101066589355
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00529653113335371,
+      "edit_norm": 5.011778831481934
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018994095735251904,
+      "edit_norm": 5.39649772644043
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0015432632062584162,
+      "edit_norm": 5.021104335784912
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.010926112532615662,
+      "edit_norm": 5.3849101066589355
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00529653113335371,
+      "edit_norm": 5.011778831481934
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018994095735251904,
+      "edit_norm": 5.39649772644043
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0015432632062584162,
+      "edit_norm": 5.021104335784912
+     }
+    },
+    "bottom_16": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.019974127411842346,
+      "edit_norm": 6.072962760925293
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.014377977699041367,
+      "edit_norm": 5.853334903717041
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0022333397064357996,
+      "edit_norm": 5.946047782897949
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002158278366550803,
+      "edit_norm": 5.807900428771973
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.015101811848580837,
+      "edit_norm": 5.128121852874756
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.013071267865598202,
+      "edit_norm": 5.161337375640869
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002062513493001461,
+      "edit_norm": 5.049871921539307
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018824082799255848,
+      "edit_norm": 5.106138229370117
+     }
+    },
+    "top_32": {
+     "J/J": {
+      "successes": 4,
+      "n": 53,
+      "rate": 0.07547169923782349,
+      "n_nonfinite": 0,
+      "kl": 0.17175625264644623,
+      "edit_norm": 8.37708854675293
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.039976462721824646,
+      "edit_norm": 7.904092311859131
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003978863824158907,
+      "edit_norm": 8.642723083496094
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002885446883738041,
+      "edit_norm": 7.955491065979004
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.13656580448150635,
+      "edit_norm": 9.650650024414062
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.05195320025086403,
+      "edit_norm": 9.408629417419434
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00397762143984437,
+      "edit_norm": 9.84625244140625
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003478045342490077,
+      "edit_norm": 9.459671974182129
+     }
+    },
+    "random_32": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.023628050461411476,
+      "edit_norm": 8.545560836791992
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011127663776278496,
+      "edit_norm": 7.810497760772705
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003203210886567831,
+      "edit_norm": 8.57219409942627
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0025058547034859657,
+      "edit_norm": 7.810636520385742
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.023628050461411476,
+      "edit_norm": 8.545560836791992
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011127663776278496,
+      "edit_norm": 7.810497760772705
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003203210886567831,
+      "edit_norm": 8.57219409942627
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0025058547034859657,
+      "edit_norm": 7.810636520385742
+     }
+    },
+    "bottom_32": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.027726544067263603,
+      "edit_norm": 8.227278709411621
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.015132480300962925,
+      "edit_norm": 7.791016101837158
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002946670865640044,
+      "edit_norm": 8.069406509399414
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0028454463463276625,
+      "edit_norm": 7.74755859375
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01907668448984623,
+      "edit_norm": 6.633567810058594
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.018282130360603333,
+      "edit_norm": 6.6879801750183105
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002800616202875972,
+      "edit_norm": 6.567448616027832
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0024608937092125416,
+      "edit_norm": 6.624299049377441
+     }
+    },
+    "top_64": {
+     "J/J": {
+      "successes": 7,
+      "n": 53,
+      "rate": 0.1320754736661911,
+      "n_nonfinite": 0,
+      "kl": 0.259243905544281,
+      "edit_norm": 11.691845893859863
+     },
+     "J/L": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.053457241505384445,
+      "edit_norm": 11.714728355407715
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0055329883471131325,
+      "edit_norm": 11.976597785949707
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00477982684969902,
+      "edit_norm": 11.750231742858887
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.1693481206893921,
+      "edit_norm": 12.374183654785156
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.06746867299079895,
+      "edit_norm": 12.210382461547852
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005615628324449062,
+      "edit_norm": 12.57066822052002
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004703258164227009,
+      "edit_norm": 12.252758026123047
+     }
+    },
+    "random_64": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.047052305191755295,
+      "edit_norm": 11.908343315124512
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.024821646511554718,
+      "edit_norm": 11.32254409790039
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0049857525154948235,
+      "edit_norm": 11.941267967224121
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004840748384594917,
+      "edit_norm": 11.31894302368164
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.047052305191755295,
+      "edit_norm": 11.908343315124512
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.024821646511554718,
+      "edit_norm": 11.32254409790039
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0049857525154948235,
+      "edit_norm": 11.941267967224121
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004840748384594917,
+      "edit_norm": 11.31894302368164
+     }
+    },
+    "bottom_64": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.035283058881759644,
+      "edit_norm": 11.121444702148438
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.022092146798968315,
+      "edit_norm": 10.30672836303711
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004039149731397629,
+      "edit_norm": 10.964066505432129
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004032508470118046,
+      "edit_norm": 10.251653671264648
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.02622806280851364,
+      "edit_norm": 10.33616828918457
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.026037534698843956,
+      "edit_norm": 9.655715942382812
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.003634341759607196,
+      "edit_norm": 10.264564514160156
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0034949565306305885,
+      "edit_norm": 9.583650588989258
+     }
+    },
+    "active": {
+     "J/J": {
+      "successes": 5,
+      "n": 53,
+      "rate": 0.09433962404727936,
+      "n_nonfinite": 0,
+      "kl": 0.1279817819595337,
+      "edit_norm": 7.5294904708862305
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.03317314013838768,
+      "edit_norm": 6.974042892456055
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0031570917926728725,
+      "edit_norm": 7.70383882522583
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002411365043371916,
+      "edit_norm": 7.011576175689697
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.06510050594806671,
+      "edit_norm": 7.3397650718688965
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.02904290147125721,
+      "edit_norm": 7.415411949157715
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002605319954454899,
+      "edit_norm": 7.3970441818237305
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002261166926473379,
+      "edit_norm": 7.4300642013549805
+     }
+    },
+    "random_active": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011625085026025772,
+      "edit_norm": 5.709715843200684
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005596501287072897,
+      "edit_norm": 5.193568229675293
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0021275561302900314,
+      "edit_norm": 5.722788333892822
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0016751575749367476,
+      "edit_norm": 5.203172206878662
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007580629549920559,
+      "edit_norm": 3.4964733123779297
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004044937901198864,
+      "edit_norm": 3.3235442638397217
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0014902724651619792,
+      "edit_norm": 3.502183437347412
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.001440469641238451,
+      "edit_norm": 3.3247311115264893
+     }
+    },
+    "bottom_active": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0221654511988163,
+      "edit_norm": 6.3061442375183105
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.013780863024294376,
+      "edit_norm": 5.8794379234313965
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0024467206094413996,
+      "edit_norm": 6.169613838195801
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0023676943965256214,
+      "edit_norm": 5.835043907165527
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.008961835876107216,
+      "edit_norm": 4.045527458190918
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0082648154348135,
+      "edit_norm": 4.130013942718506
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0015390976332128048,
+      "edit_norm": 3.9902615547180176
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018073966493830085,
+      "edit_norm": 4.090799808502197
+     }
+    }
+   },
+   "contrasts": {
+    "top_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_16": {
+     "end_to_end": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_32": {
+     "end_to_end": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_32": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_32": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_64": {
+     "end_to_end": {
+      "mean": 0.09433962264150944,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.07547169811320754,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.07547169811320754,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_64": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_64": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "active": {
+     "end_to_end": {
+      "mean": 0.05660377358490566,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.05660377358490566,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    }
+   },
+   "layer_wide": {
+    "J": {
+     "successes": 27,
+     "n": 53,
+     "rate": 0.5094339847564697,
+     "n_nonfinite": 0,
+     "kl": 2.4700863361358643,
+     "edit_norm": 8.739794731140137
+    },
+    "L": {
+     "successes": 10,
+     "n": 53,
+     "rate": 0.18867924809455872,
+     "n_nonfinite": 0,
+     "kl": 0.7939362525939941,
+     "edit_norm": 8.7750825881958
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.20147478580474854,
+     "edit_norm": 37.28001022338867
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.07700864970684052,
+     "edit_norm": 29.301668167114258
+    }
+   },
+   "layer_wide_contrast": {
+    "mean": 0.32075471698113206,
+    "prompts": 53,
+    "trials": 53
+   },
+   "layer_wide_band": {
+    "J": {
+     "successes": 25,
+     "n": 53,
+     "rate": 0.4716981053352356,
+     "n_nonfinite": 0,
+     "kl": 2.67494797706604,
+     "edit_norm": 7.793682098388672
+    },
+    "L": {
+     "successes": 8,
+     "n": 53,
+     "rate": 0.15094339847564697,
+     "n_nonfinite": 0,
+     "kl": 0.5811693668365479,
+     "edit_norm": 7.419425010681152
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.11642897129058838,
+     "edit_norm": 30.357425689697266
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.052669424563646317,
+     "edit_norm": 22.590354919433594
+    }
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 2.0,
+   "n_trials": 53,
+   "cells": {
+    "top_1": {
+     "J/J": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.0594935342669487,
+      "edit_norm": 3.6118645668029785
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.021615764126181602,
+      "edit_norm": 2.7982664108276367
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0025892730336636305,
+      "edit_norm": 3.6118645668029785
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0017359962221235037,
+      "edit_norm": 2.7982664108276367
+     },
+     "L/J": {
+      "successes": 4,
+      "n": 53,
+      "rate": 0.07547169923782349,
+      "n_nonfinite": 0,
+      "kl": 0.21306991577148438,
+      "edit_norm": 4.801506042480469
+     },
+     "L/L": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.09484504908323288,
+      "edit_norm": 4.8392510414123535
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.002061129780486226,
+      "edit_norm": 4.801506042480469
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0018767464207485318,
+      "edit_norm": 4.8392510414123535
+     }
+    },
+    "random_1": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008269838290289044,
+      "edit_norm": 1.190862774848938
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0010242944117635489,
+      "edit_norm": 1.4628881216049194
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008198111318051815,
+      "edit_norm": 1.190862774848938
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0009387669269926846,
+      "edit_norm": 1.4628881216049194
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008269838290289044,
+      "edit_norm": 1.190862774848938
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0010242944117635489,
+      "edit_norm": 1.4628881216049194
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0008198111318051815,
+      "edit_norm": 1.190862774848938
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0009387669269926846,
+      "edit_norm": 1.4628881216049194
+     }
+    },
+    "bottom_1": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0061759850941598415,
+      "edit_norm": 3.857908248901367
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0055134352296590805,
+      "edit_norm": 3.591309070587158
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0017710962565615773,
+      "edit_norm": 3.857908248901367
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0016009162645787,
+      "edit_norm": 3.591309070587158
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007845097221434116,
+      "edit_norm": 3.9148199558258057
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007907566614449024,
+      "edit_norm": 4.175045967102051
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.001659504254348576,
+      "edit_norm": 3.9148201942443848
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0016267375322058797,
+      "edit_norm": 4.175045967102051
+     }
+    },
+    "top_8": {
+     "J/J": {
+      "successes": 14,
+      "n": 53,
+      "rate": 0.2641509473323822,
+      "n_nonfinite": 0,
+      "kl": 0.8868003487586975,
+      "edit_norm": 10.912614822387695
+     },
+     "J/L": {
+      "successes": 7,
+      "n": 53,
+      "rate": 0.1320754736661911,
+      "n_nonfinite": 0,
+      "kl": 0.24398893117904663,
+      "edit_norm": 9.633624076843262
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007443537469953299,
+      "edit_norm": 11.156681060791016
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004623022396117449,
+      "edit_norm": 9.681601524353027
+     },
+     "L/J": {
+      "successes": 15,
+      "n": 53,
+      "rate": 0.2830188572406769,
+      "n_nonfinite": 0,
+      "kl": 0.9312537312507629,
+      "edit_norm": 12.209165573120117
+     },
+     "L/L": {
+      "successes": 7,
+      "n": 53,
+      "rate": 0.1320754736661911,
+      "n_nonfinite": 0,
+      "kl": 0.38903650641441345,
+      "edit_norm": 11.763608932495117
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.008410966955125332,
+      "edit_norm": 12.436022758483887
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00674113305285573,
+      "edit_norm": 11.83261775970459
+     }
+    },
+    "random_8": {
+     "J/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.05708965286612511,
+      "edit_norm": 7.144192218780518
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.020272688940167427,
+      "edit_norm": 6.800509452819824
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0032121704425662756,
+      "edit_norm": 7.146499156951904
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0027556882705539465,
+      "edit_norm": 6.800601482391357
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.05708965286612511,
+      "edit_norm": 7.144192218780518
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.020272688940167427,
+      "edit_norm": 6.800509452819824
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0032121704425662756,
+      "edit_norm": 7.146499156951904
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0027556882705539465,
+      "edit_norm": 6.800601482391357
+     }
+    },
+    "bottom_8": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.04098448157310486,
+      "edit_norm": 9.308472633361816
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.028247520327568054,
+      "edit_norm": 8.789316177368164
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0053077335469424725,
+      "edit_norm": 9.178784370422363
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0047143311239778996,
+      "edit_norm": 8.726958274841309
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.030374452471733093,
+      "edit_norm": 8.003348350524902
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.027674542739987373,
+      "edit_norm": 8.09168815612793
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004000668879598379,
+      "edit_norm": 7.886605739593506
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004415762145072222,
+      "edit_norm": 8.021148681640625
+     }
+    },
+    "top_16": {
+     "J/J": {
+      "successes": 20,
+      "n": 53,
+      "rate": 0.37735849618911743,
+      "n_nonfinite": 0,
+      "kl": 1.4742693901062012,
+      "edit_norm": 13.917123794555664
+     },
+     "J/L": {
+      "successes": 8,
+      "n": 53,
+      "rate": 0.15094339847564697,
+      "n_nonfinite": 0,
+      "kl": 0.391878604888916,
+      "edit_norm": 12.800248146057129
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.010225651785731316,
+      "edit_norm": 14.357559204101562
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007262522354722023,
+      "edit_norm": 12.903374671936035
+     },
+     "L/J": {
+      "successes": 18,
+      "n": 53,
+      "rate": 0.3396226465702057,
+      "n_nonfinite": 0,
+      "kl": 1.2497169971466064,
+      "edit_norm": 15.695646286010742
+     },
+     "L/L": {
+      "successes": 9,
+      "n": 53,
+      "rate": 0.16981132328510284,
+      "n_nonfinite": 0,
+      "kl": 0.5058600306510925,
+      "edit_norm": 15.434931755065918
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011251574382185936,
+      "edit_norm": 16.095703125
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.009302632883191109,
+      "edit_norm": 15.530207633972168
+     }
+    },
+    "random_16": {
+     "J/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.09034695476293564,
+      "edit_norm": 10.76779842376709
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.02555594965815544,
+      "edit_norm": 10.028704643249512
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005242745392024517,
+      "edit_norm": 10.793952941894531
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004137926734983921,
+      "edit_norm": 10.042669296264648
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.09034695476293564,
+      "edit_norm": 10.76779842376709
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.02555594965815544,
+      "edit_norm": 10.028704643249512
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005242745392024517,
+      "edit_norm": 10.793952941894531
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004137926734983921,
+      "edit_norm": 10.042669296264648
+     }
+    },
+    "bottom_16": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.07309257984161377,
+      "edit_norm": 12.124496459960938
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.05105963349342346,
+      "edit_norm": 11.69534683227539
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007180484943091869,
+      "edit_norm": 11.88426685333252
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007726279087364674,
+      "edit_norm": 11.609306335449219
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.05467091500759125,
+      "edit_norm": 10.23444938659668
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.045094843953847885,
+      "edit_norm": 10.310420989990234
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005581701640039682,
+      "edit_norm": 10.099205017089844
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005590466782450676,
+      "edit_norm": 10.21103286743164
+     }
+    },
+    "top_32": {
+     "J/J": {
+      "successes": 24,
+      "n": 53,
+      "rate": 0.4528301954269409,
+      "n_nonfinite": 0,
+      "kl": 2.0485315322875977,
+      "edit_norm": 16.56100082397461
+     },
+     "J/L": {
+      "successes": 10,
+      "n": 53,
+      "rate": 0.18867924809455872,
+      "n_nonfinite": 0,
+      "kl": 0.5786054134368896,
+      "edit_norm": 15.775628089904785
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.012638159096240997,
+      "edit_norm": 17.270221710205078
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.009122241288423538,
+      "edit_norm": 15.902588844299316
+     },
+     "L/J": {
+      "successes": 22,
+      "n": 53,
+      "rate": 0.4150943458080292,
+      "n_nonfinite": 0,
+      "kl": 1.704035758972168,
+      "edit_norm": 19.156665802001953
+     },
+     "L/L": {
+      "successes": 11,
+      "n": 53,
+      "rate": 0.2075471729040146,
+      "n_nonfinite": 0,
+      "kl": 0.7159578800201416,
+      "edit_norm": 18.781557083129883
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01346288900822401,
+      "edit_norm": 19.684646606445312
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.012034197337925434,
+      "edit_norm": 18.913042068481445
+     }
+    },
+    "random_32": {
+     "J/J": {
+      "successes": 5,
+      "n": 53,
+      "rate": 0.09433962404727936,
+      "n_nonfinite": 0,
+      "kl": 0.2751322090625763,
+      "edit_norm": 17.069904327392578
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.07479703426361084,
+      "edit_norm": 15.609075546264648
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.009869088418781757,
+      "edit_norm": 17.14326286315918
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00691758468747139,
+      "edit_norm": 15.61971664428711
+     },
+     "L/J": {
+      "successes": 5,
+      "n": 53,
+      "rate": 0.09433962404727936,
+      "n_nonfinite": 0,
+      "kl": 0.2751322090625763,
+      "edit_norm": 17.069904327392578
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 53,
+      "rate": 0.03773584961891174,
+      "n_nonfinite": 0,
+      "kl": 0.07479703426361084,
+      "edit_norm": 15.609075546264648
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.009869088418781757,
+      "edit_norm": 17.14326286315918
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00691758468747139,
+      "edit_norm": 15.61971664428711
+     }
+    },
+    "bottom_32": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.10777541995048523,
+      "edit_norm": 16.425085067749023
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.07020607590675354,
+      "edit_norm": 15.572420120239258
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00956408679485321,
+      "edit_norm": 16.132415771484375
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.009899551048874855,
+      "edit_norm": 15.489168167114258
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.07692337781190872,
+      "edit_norm": 13.251187324523926
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.07010003179311752,
+      "edit_norm": 13.364436149597168
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.008029253222048283,
+      "edit_norm": 13.124139785766602
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007861006073653698,
+      "edit_norm": 13.247875213623047
+     }
+    },
+    "top_64": {
+     "J/J": {
+      "successes": 25,
+      "n": 53,
+      "rate": 0.4716981053352356,
+      "n_nonfinite": 0,
+      "kl": 2.60801100730896,
+      "edit_norm": 23.19914436340332
+     },
+     "J/L": {
+      "successes": 12,
+      "n": 53,
+      "rate": 0.22641509771347046,
+      "n_nonfinite": 0,
+      "kl": 0.7256015539169312,
+      "edit_norm": 23.401586532592773
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.018356338143348694,
+      "edit_norm": 23.948623657226562
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.014633654616773129,
+      "edit_norm": 23.50191307067871
+     },
+     "L/J": {
+      "successes": 23,
+      "n": 53,
+      "rate": 0.43396225571632385,
+      "n_nonfinite": 0,
+      "kl": 2.1165764331817627,
+      "edit_norm": 24.590835571289062
+     },
+     "L/L": {
+      "successes": 13,
+      "n": 53,
+      "rate": 0.24528302252292633,
+      "n_nonfinite": 0,
+      "kl": 0.8641678690910339,
+      "edit_norm": 24.383323669433594
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.018472792580723763,
+      "edit_norm": 25.13104820251465
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01602107472717762,
+      "edit_norm": 24.49566078186035
+     }
+    },
+    "random_64": {
+     "J/J": {
+      "successes": 8,
+      "n": 53,
+      "rate": 0.15094339847564697,
+      "n_nonfinite": 0,
+      "kl": 0.5445230007171631,
+      "edit_norm": 23.77271270751953
+     },
+     "J/L": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.18108540773391724,
+      "edit_norm": 22.62373924255371
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.016008032485842705,
+      "edit_norm": 23.876850128173828
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01565600372850895,
+      "edit_norm": 22.633615493774414
+     },
+     "L/J": {
+      "successes": 8,
+      "n": 53,
+      "rate": 0.15094339847564697,
+      "n_nonfinite": 0,
+      "kl": 0.5445230007171631,
+      "edit_norm": 23.77271270751953
+     },
+     "L/L": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.18108540773391724,
+      "edit_norm": 22.62373924255371
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.016008032485842705,
+      "edit_norm": 23.876850128173828
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01565600372850895,
+      "edit_norm": 22.633615493774414
+     }
+    },
+    "bottom_64": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.13475172221660614,
+      "edit_norm": 22.206932067871094
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.09498626738786697,
+      "edit_norm": 20.60767936706543
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.012879406102001667,
+      "edit_norm": 21.92282485961914
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.01484551653265953,
+      "edit_norm": 20.501251220703125
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.10648366063833237,
+      "edit_norm": 20.641109466552734
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.10674808919429779,
+      "edit_norm": 19.312286376953125
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.011487061157822609,
+      "edit_norm": 20.522634506225586
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.012278314679861069,
+      "edit_norm": 19.172021865844727
+     }
+    },
+    "active": {
+     "J/J": {
+      "successes": 19,
+      "n": 53,
+      "rate": 0.35849055647850037,
+      "n_nonfinite": 0,
+      "kl": 1.62870454788208,
+      "edit_norm": 14.922000885009766
+     },
+     "J/L": {
+      "successes": 8,
+      "n": 53,
+      "rate": 0.15094339847564697,
+      "n_nonfinite": 0,
+      "kl": 0.5257936120033264,
+      "edit_norm": 13.927743911743164
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.010809547267854214,
+      "edit_norm": 15.397539138793945
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.006737727206200361,
+      "edit_norm": 14.01804256439209
+     },
+     "L/J": {
+      "successes": 15,
+      "n": 53,
+      "rate": 0.2830188572406769,
+      "n_nonfinite": 0,
+      "kl": 0.8637259006500244,
+      "edit_norm": 14.631880760192871
+     },
+     "L/L": {
+      "successes": 9,
+      "n": 53,
+      "rate": 0.16981132328510284,
+      "n_nonfinite": 0,
+      "kl": 0.3885002136230469,
+      "edit_norm": 14.81508731842041
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007961608469486237,
+      "edit_norm": 14.795116424560547
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.006198536138981581,
+      "edit_norm": 14.85871696472168
+     }
+    },
+    "random_active": {
+     "J/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.09780319780111313,
+      "edit_norm": 11.411192893981934
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.02841499075293541,
+      "edit_norm": 10.388631820678711
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.005927842576056719,
+      "edit_norm": 11.447608947753906
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004305013921111822,
+      "edit_norm": 10.40556812286377
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 53,
+      "rate": 0.056603774428367615,
+      "n_nonfinite": 0,
+      "kl": 0.06031129136681557,
+      "edit_norm": 6.989180088043213
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.020210793241858482,
+      "edit_norm": 6.646189212799072
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.0029940807726234198,
+      "edit_norm": 7.002751350402832
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.00279748672619462,
+      "edit_norm": 6.649841785430908
+     }
+    },
+    "bottom_active": {
+     "J/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.08270327001810074,
+      "edit_norm": 12.58796501159668
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.06104239448904991,
+      "edit_norm": 11.750020980834961
+     },
+     "J/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.007495395373553038,
+      "edit_norm": 12.339680671691895
+     },
+     "J/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.008677409961819649,
+      "edit_norm": 11.66563606262207
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.03308766335248947,
+      "edit_norm": 8.077888488769531
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.028448764234781265,
+      "edit_norm": 8.250971794128418
+     },
+     "L/J_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004462001845240593,
+      "edit_norm": 7.973013877868652
+     },
+     "L/L_rand": {
+      "successes": 1,
+      "n": 53,
+      "rate": 0.01886792480945587,
+      "n_nonfinite": 0,
+      "kl": 0.004983089864253998,
+      "edit_norm": 8.183098793029785
+     }
+    }
+   },
+   "contrasts": {
+    "top_1": {
+     "end_to_end": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": -0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_8": {
+     "end_to_end": {
+      "mean": 0.1320754716981132,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.1320754716981132,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.1509433962264151,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_8": {
+     "end_to_end": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_16": {
+     "end_to_end": {
+      "mean": 0.20754716981132076,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.22641509433962265,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.16981132075471697,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_16": {
+     "end_to_end": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_32": {
+     "end_to_end": {
+      "mean": 0.24528301886792453,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.2641509433962264,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.20754716981132076,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_32": {
+     "end_to_end": {
+      "mean": 0.05660377358490566,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.05660377358490566,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.05660377358490566,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_32": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "top_64": {
+     "end_to_end": {
+      "mean": 0.22641509433962265,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.24528301886792453,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.18867924528301888,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_64": {
+     "end_to_end": {
+      "mean": 0.09433962264150944,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.09433962264150944,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.09433962264150944,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_64": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "active": {
+     "end_to_end": {
+      "mean": 0.18867924528301888,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.20754716981132076,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.11320754716981132,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.07547169811320754,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": -0.018867924528301886,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "random_active": {
+     "end_to_end": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.03773584905660377,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    },
+    "bottom_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 53,
+      "trials": 53
+     }
+    }
+   },
+   "layer_wide": {
+    "J": {
+     "successes": 20,
+     "n": 53,
+     "rate": 0.37735849618911743,
+     "n_nonfinite": 0,
+     "kl": 6.360976696014404,
+     "edit_norm": 18.131200790405273
+    },
+    "L": {
+     "successes": 19,
+     "n": 53,
+     "rate": 0.35849055647850037,
+     "n_nonfinite": 0,
+     "kl": 4.123796463012695,
+     "edit_norm": 17.68578338623047
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 1.470598578453064,
+     "edit_norm": 71.73695373535156
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 53,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.49067774415016174,
+     "edit_norm": 57.78811264038086
+    }
+   },
+   "layer_wide_contrast": {
+    "mean": 0.018867924528301886,
+    "prompts": 53,
+    "trials": 53
+   },
+   "layer_wide_band": {
+    "J": {
+     "successes": 20,
+     "n": 53,
+     "rate": 0.37735849618911743,
+     "n_nonfinite": 0,
+     "kl": 6.393141269683838,
+     "edit_norm": 16.213747024536133
+    },
+    "L": {
+     "successes": 17,
+     "n": 53,
+     "rate": 0.3207547068595886,
+     "n_nonfinite": 0,
+     "kl": 3.434765338897705,
+     "edit_norm": 14.803399085998535
+    },
+    "J_rand": {
+     "successes": 1,
+     "n": 53,
+     "rate": 0.01886792480945587,
+     "n_nonfinite": 0,
+     "kl": 0.9610699415206909,
+     "edit_norm": 59.201942443847656
+    },
+    "L_rand": {
+     "successes": 1,
+     "n": 53,
+     "rate": 0.01886792480945587,
+     "n_nonfinite": 0,
+     "kl": 0.3302874267101288,
+     "edit_norm": 44.75041961669922
+    }
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 1.0,
+   "n_trials": 140,
+   "cells": {
+    "top_1": {
+     "J/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.007745030801743269,
+      "edit_norm": 4.413945198059082
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.00448854872956872,
+      "edit_norm": 3.1898555755615234
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0014031154569238424,
+      "edit_norm": 4.413945198059082
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0010343871545046568,
+      "edit_norm": 3.1898553371429443
+     },
+     "L/J": {
+      "successes": 3,
+      "n": 140,
+      "rate": 0.02142857201397419,
+      "n_nonfinite": 0,
+      "kl": 0.018692057579755783,
+      "edit_norm": 7.2857232093811035
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 140,
+      "rate": 0.0071428571827709675,
+      "n_nonfinite": 0,
+      "kl": 0.016440419480204582,
+      "edit_norm": 9.043437957763672
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002503911731764674,
+      "edit_norm": 7.2857232093811035
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0028820899315178394,
+      "edit_norm": 9.043437957763672
+     }
+    },
+    "random_1": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0013527687406167388,
+      "edit_norm": 1.1223076581954956
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001190241426229477,
+      "edit_norm": 0.7731391787528992
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0007788247894495726,
+      "edit_norm": 1.1223076581954956
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0006504193879663944,
+      "edit_norm": 0.7731391787528992
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0013527687406167388,
+      "edit_norm": 1.1223076581954956
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001190241426229477,
+      "edit_norm": 0.7731391787528992
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0007788247894495726,
+      "edit_norm": 1.1223076581954956
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0006504193879663944,
+      "edit_norm": 0.7731391787528992
+     }
+    },
+    "bottom_1": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002239775378257036,
+      "edit_norm": 3.8816049098968506
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0008360576466657221,
+      "edit_norm": 1.4842926263809204
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0010079002240672708,
+      "edit_norm": 3.8816049098968506
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0006297497311607003,
+      "edit_norm": 1.4842926263809204
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0010429245885461569,
+      "edit_norm": 0.6817963719367981
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0008233106345869601,
+      "edit_norm": 0.6210784912109375
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0006717626238241792,
+      "edit_norm": 0.6817962527275085
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0006368309259414673,
+      "edit_norm": 0.6210784912109375
+     }
+    },
+    "top_8": {
+     "J/J": {
+      "successes": 18,
+      "n": 140,
+      "rate": 0.12857143580913544,
+      "n_nonfinite": 0,
+      "kl": 0.1075567826628685,
+      "edit_norm": 10.324919700622559
+     },
+     "J/L": {
+      "successes": 4,
+      "n": 140,
+      "rate": 0.02857142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.03550099954009056,
+      "edit_norm": 9.920283317565918
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.00397897232323885,
+      "edit_norm": 10.223485946655273
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.003279381664469838,
+      "edit_norm": 9.887011528015137
+     },
+     "L/J": {
+      "successes": 7,
+      "n": 140,
+      "rate": 0.05000000074505806,
+      "n_nonfinite": 0,
+      "kl": 0.05893056094646454,
+      "edit_norm": 12.764042854309082
+     },
+     "L/L": {
+      "successes": 8,
+      "n": 140,
+      "rate": 0.05714285746216774,
+      "n_nonfinite": 0,
+      "kl": 0.08255793899297714,
+      "edit_norm": 13.986739158630371
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004144663456827402,
+      "edit_norm": 12.73668384552002
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004672549664974213,
+      "edit_norm": 13.935656547546387
+     }
+    },
+    "random_8": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.06844137609004974,
+      "edit_norm": 5.39499044418335
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.014400924555957317,
+      "edit_norm": 3.8828282356262207
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0031406739726662636,
+      "edit_norm": 5.393187522888184
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001526610809378326,
+      "edit_norm": 3.884204149246216
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.06844137609004974,
+      "edit_norm": 5.39499044418335
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.014400924555957317,
+      "edit_norm": 3.8828282356262207
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0031406739726662636,
+      "edit_norm": 5.393187522888184
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001526610809378326,
+      "edit_norm": 3.884204149246216
+     }
+    },
+    "bottom_8": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.017394263297319412,
+      "edit_norm": 8.129481315612793
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0029914523474872112,
+      "edit_norm": 4.275216102600098
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0024684208910912275,
+      "edit_norm": 8.155380249023438
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0011735052103176713,
+      "edit_norm": 4.281494617462158
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004781093914061785,
+      "edit_norm": 2.3386292457580566
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001656665001064539,
+      "edit_norm": 2.2869277000427246
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0015740720555186272,
+      "edit_norm": 2.340191602706909
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.001023334451019764,
+      "edit_norm": 2.2874982357025146
+     }
+    },
+    "top_16": {
+     "J/J": {
+      "successes": 29,
+      "n": 140,
+      "rate": 0.20714285969734192,
+      "n_nonfinite": 0,
+      "kl": 0.1366957724094391,
+      "edit_norm": 11.425434112548828
+     },
+     "J/L": {
+      "successes": 4,
+      "n": 140,
+      "rate": 0.02857142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.048178352415561676,
+      "edit_norm": 11.309773445129395
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005141618195921183,
+      "edit_norm": 11.299848556518555
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.003929545171558857,
+      "edit_norm": 11.272438049316406
+     },
+     "L/J": {
+      "successes": 10,
+      "n": 140,
+      "rate": 0.0714285746216774,
+      "n_nonfinite": 0,
+      "kl": 0.09229625761508942,
+      "edit_norm": 14.781009674072266
+     },
+     "L/L": {
+      "successes": 15,
+      "n": 140,
+      "rate": 0.1071428582072258,
+      "n_nonfinite": 0,
+      "kl": 0.13668906688690186,
+      "edit_norm": 15.310062408447266
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006217047572135925,
+      "edit_norm": 14.747328758239746
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005768666975200176,
+      "edit_norm": 15.256173133850098
+     }
+    },
+    "random_16": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.16965244710445404,
+      "edit_norm": 8.59371566772461
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.031426940113306046,
+      "edit_norm": 6.432796955108643
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0069424728862941265,
+      "edit_norm": 8.591649055480957
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0025173474568873644,
+      "edit_norm": 6.435061931610107
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.16965244710445404,
+      "edit_norm": 8.59371566772461
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.031426940113306046,
+      "edit_norm": 6.432796955108643
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0069424728862941265,
+      "edit_norm": 8.591649055480957
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0025173474568873644,
+      "edit_norm": 6.435061931610107
+     }
+    },
+    "bottom_16": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.28747448325157166,
+      "edit_norm": 11.639143943786621
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02470274269580841,
+      "edit_norm": 7.094887733459473
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.007326900959014893,
+      "edit_norm": 11.654326438903809
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0021892362274229527,
+      "edit_norm": 7.115298748016357
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.012321017682552338,
+      "edit_norm": 4.320207595825195
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0034552598372101784,
+      "edit_norm": 3.1831307411193848
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0032613042276352644,
+      "edit_norm": 4.322752952575684
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0014442221727222204,
+      "edit_norm": 3.1825103759765625
+     }
+    },
+    "top_32": {
+     "J/J": {
+      "successes": 58,
+      "n": 140,
+      "rate": 0.41428571939468384,
+      "n_nonfinite": 0,
+      "kl": 0.24855242669582367,
+      "edit_norm": 14.897751808166504
+     },
+     "J/L": {
+      "successes": 4,
+      "n": 140,
+      "rate": 0.02857142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.0714719370007515,
+      "edit_norm": 13.534268379211426
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.009396038949489594,
+      "edit_norm": 14.735177040100098
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005489067640155554,
+      "edit_norm": 13.511645317077637
+     },
+     "L/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.07570954412221909,
+      "edit_norm": 16.373361587524414
+     },
+     "L/L": {
+      "successes": 12,
+      "n": 140,
+      "rate": 0.08571428805589676,
+      "n_nonfinite": 0,
+      "kl": 0.13434788584709167,
+      "edit_norm": 16.638002395629883
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.009666016325354576,
+      "edit_norm": 16.308879852294922
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0071167051792144775,
+      "edit_norm": 16.55907440185547
+     }
+    },
+    "random_32": {
+     "J/J": {
+      "successes": 4,
+      "n": 140,
+      "rate": 0.02857142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.3073003590106964,
+      "edit_norm": 12.784957885742188
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.053058087825775146,
+      "edit_norm": 9.356423377990723
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.011837412603199482,
+      "edit_norm": 12.77342700958252
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004133475013077259,
+      "edit_norm": 9.353968620300293
+     },
+     "L/J": {
+      "successes": 4,
+      "n": 140,
+      "rate": 0.02857142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.3073003590106964,
+      "edit_norm": 12.784957885742188
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.053058087825775146,
+      "edit_norm": 9.356423377990723
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.011837412603199482,
+      "edit_norm": 12.77342700958252
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004133475013077259,
+      "edit_norm": 9.353968620300293
+     }
+    },
+    "bottom_32": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 1.0872211456298828,
+      "edit_norm": 16.97743034362793
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0887812152504921,
+      "edit_norm": 9.514941215515137
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.025833776220679283,
+      "edit_norm": 16.954025268554688
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004784580785781145,
+      "edit_norm": 9.5606689453125
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02077081799507141,
+      "edit_norm": 6.913504123687744
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006117104087024927,
+      "edit_norm": 4.552776336669922
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005741438362747431,
+      "edit_norm": 6.9055304527282715
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0020472740288823843,
+      "edit_norm": 4.547468662261963
+     }
+    },
+    "top_64": {
+     "J/J": {
+      "successes": 46,
+      "n": 140,
+      "rate": 0.3285714387893677,
+      "n_nonfinite": 0,
+      "kl": 0.24862954020500183,
+      "edit_norm": 18.130666732788086
+     },
+     "J/L": {
+      "successes": 6,
+      "n": 140,
+      "rate": 0.04285714402794838,
+      "n_nonfinite": 0,
+      "kl": 0.1004135012626648,
+      "edit_norm": 15.792912483215332
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.016909649595618248,
+      "edit_norm": 17.901527404785156
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.007611339446157217,
+      "edit_norm": 15.792526245117188
+     },
+     "L/J": {
+      "successes": 15,
+      "n": 140,
+      "rate": 0.1071428582072258,
+      "n_nonfinite": 0,
+      "kl": 1.6515694856643677,
+      "edit_norm": 23.49304962158203
+     },
+     "L/L": {
+      "successes": 11,
+      "n": 140,
+      "rate": 0.07857143133878708,
+      "n_nonfinite": 0,
+      "kl": 0.32165414094924927,
+      "edit_norm": 18.744754791259766
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.03947550058364868,
+      "edit_norm": 23.455368041992188
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010970506817102432,
+      "edit_norm": 18.67606544494629
+     }
+    },
+    "random_64": {
+     "J/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.7646967172622681,
+      "edit_norm": 18.60822868347168
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.10716739296913147,
+      "edit_norm": 13.864340782165527
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.025954781100153923,
+      "edit_norm": 18.600059509277344
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006877928040921688,
+      "edit_norm": 13.885953903198242
+     },
+     "L/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.7646967172622681,
+      "edit_norm": 18.60822868347168
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.10716739296913147,
+      "edit_norm": 13.864340782165527
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.025954781100153923,
+      "edit_norm": 18.600059509277344
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006877928040921688,
+      "edit_norm": 13.885953903198242
+     }
+    },
+    "bottom_64": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 1.123020052909851,
+      "edit_norm": 19.952150344848633
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.09975187480449677,
+      "edit_norm": 12.262133598327637
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0348878912627697,
+      "edit_norm": 19.89328956604004
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006265719421207905,
+      "edit_norm": 12.312207221984863
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.04108785465359688,
+      "edit_norm": 12.578557968139648
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.012925853952765465,
+      "edit_norm": 7.107694149017334
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01145959086716175,
+      "edit_norm": 12.566157341003418
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.003042327705770731,
+      "edit_norm": 7.0902581214904785
+     }
+    },
+    "active": {
+     "J/J": {
+      "successes": 73,
+      "n": 140,
+      "rate": 0.5214285850524902,
+      "n_nonfinite": 0,
+      "kl": 1.886872410774231,
+      "edit_norm": 18.501445770263672
+     },
+     "J/L": {
+      "successes": 3,
+      "n": 140,
+      "rate": 0.02142857201397419,
+      "n_nonfinite": 0,
+      "kl": 0.16976585984230042,
+      "edit_norm": 12.648210525512695
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02375863306224346,
+      "edit_norm": 18.380033493041992
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005438522901386023,
+      "edit_norm": 12.625214576721191
+     },
+     "L/J": {
+      "successes": 9,
+      "n": 140,
+      "rate": 0.06428571790456772,
+      "n_nonfinite": 0,
+      "kl": 0.5443909764289856,
+      "edit_norm": 15.894421577453613
+     },
+     "L/L": {
+      "successes": 9,
+      "n": 140,
+      "rate": 0.06428571790456772,
+      "n_nonfinite": 0,
+      "kl": 0.14939066767692566,
+      "edit_norm": 15.767081260681152
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01113884150981903,
+      "edit_norm": 15.867164611816406
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005973735824227333,
+      "edit_norm": 15.720682144165039
+     }
+    },
+    "random_active": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.15272268652915955,
+      "edit_norm": 8.495298385620117
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.029872030019760132,
+      "edit_norm": 6.3725080490112305
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.00647382065653801,
+      "edit_norm": 8.493648529052734
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0024852086789906025,
+      "edit_norm": 6.375304222106934
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.11944834887981415,
+      "edit_norm": 7.755570888519287
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.023740530014038086,
+      "edit_norm": 5.799401760101318
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005281785503029823,
+      "edit_norm": 7.754431247711182
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002241679932922125,
+      "edit_norm": 5.801915645599365
+     }
+    },
+    "bottom_active": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.1476258784532547,
+      "edit_norm": 10.621578216552734
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.016156719997525215,
+      "edit_norm": 6.6788811683654785
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005878823809325695,
+      "edit_norm": 10.629356384277344
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0020658005960285664,
+      "edit_norm": 6.7008795738220215
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010659156367182732,
+      "edit_norm": 3.66534161567688
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0027497021947056055,
+      "edit_norm": 2.946812391281128
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0023371551651507616,
+      "edit_norm": 3.667212724685669
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0012535372516140342,
+      "edit_norm": 2.9455223083496094
+     }
+    }
+   },
+   "contrasts": {
+    "top_1": {
+     "end_to_end": {
+      "mean": 0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": -0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_8": {
+     "end_to_end": {
+      "mean": 0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.1,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.07857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_16": {
+     "end_to_end": {
+      "mean": 0.1,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.17857142857142858,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.03571428571428571,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.1357142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.07857142857142857,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_32": {
+     "end_to_end": {
+      "mean": 0.32857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.38571428571428573,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.4,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.05714285714285714,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_32": {
+     "end_to_end": {
+      "mean": 0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_32": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_64": {
+     "end_to_end": {
+      "mean": 0.25,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.2857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.22142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.03571428571428571,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_64": {
+     "end_to_end": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_64": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "active": {
+     "end_to_end": {
+      "mean": 0.45714285714285713,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.5,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.45714285714285713,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.04285714285714286,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    }
+   },
+   "layer_wide": {
+    "J": {
+     "successes": 30,
+     "n": 140,
+     "rate": 0.2142857164144516,
+     "n_nonfinite": 0,
+     "kl": 0.7769071459770203,
+     "edit_norm": 9.581032752990723
+    },
+    "L": {
+     "successes": 10,
+     "n": 140,
+     "rate": 0.0714285746216774,
+     "n_nonfinite": 0,
+     "kl": 0.35302284359931946,
+     "edit_norm": 7.414932727813721
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.22064468264579773,
+     "edit_norm": 33.722354888916016
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.058649078011512756,
+     "edit_norm": 21.081344604492188
+    }
+   },
+   "layer_wide_contrast": {
+    "mean": 0.14285714285714285,
+    "prompts": 14,
+    "trials": 140
+   },
+   "layer_wide_band": {
+    "J": {
+     "successes": 27,
+     "n": 140,
+     "rate": 0.19285714626312256,
+     "n_nonfinite": 0,
+     "kl": 0.6278893351554871,
+     "edit_norm": 8.687768936157227
+    },
+    "L": {
+     "successes": 6,
+     "n": 140,
+     "rate": 0.04285714402794838,
+     "n_nonfinite": 0,
+     "kl": 0.22606222331523895,
+     "edit_norm": 6.091635704040527
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.11625457555055618,
+     "edit_norm": 29.18863296508789
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.039695825427770615,
+     "edit_norm": 16.58500862121582
+    }
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 2.0,
+   "n_trials": 140,
+   "cells": {
+    "top_1": {
+     "J/J": {
+      "successes": 7,
+      "n": 140,
+      "rate": 0.05000000074505806,
+      "n_nonfinite": 0,
+      "kl": 0.03262406587600708,
+      "edit_norm": 8.823657035827637
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.016513187438249588,
+      "edit_norm": 6.378941059112549
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004006778821349144,
+      "edit_norm": 8.823657035827637
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002535992069169879,
+      "edit_norm": 6.378941059112549
+     },
+     "L/J": {
+      "successes": 11,
+      "n": 140,
+      "rate": 0.07857143133878708,
+      "n_nonfinite": 0,
+      "kl": 0.0783478319644928,
+      "edit_norm": 14.565203666687012
+     },
+     "L/L": {
+      "successes": 5,
+      "n": 140,
+      "rate": 0.0357142873108387,
+      "n_nonfinite": 0,
+      "kl": 0.06793315708637238,
+      "edit_norm": 18.080198287963867
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.00828537531197071,
+      "edit_norm": 14.565203666687012
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.009767211973667145,
+      "edit_norm": 18.080198287963867
+     }
+    },
+    "random_1": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.003991169389337301,
+      "edit_norm": 2.243680238723755
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002835106337442994,
+      "edit_norm": 1.5459589958190918
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0012528662336990237,
+      "edit_norm": 2.243680238723755
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0009107810910791159,
+      "edit_norm": 1.5459589958190918
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.003991169389337301,
+      "edit_norm": 2.243680238723755
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002835106337442994,
+      "edit_norm": 1.5459589958190918
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0012528662336990237,
+      "edit_norm": 2.243680238723755
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0009107810910791159,
+      "edit_norm": 1.5459589958190918
+     }
+    },
+    "bottom_1": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.007268086541444063,
+      "edit_norm": 7.7578125
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0016104454407468438,
+      "edit_norm": 2.966425895690918
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.002172157634049654,
+      "edit_norm": 7.757814407348633
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0008115530945360661,
+      "edit_norm": 2.966425895690918
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0024719652719795704,
+      "edit_norm": 1.3637745380401611
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0016440795734524727,
+      "edit_norm": 1.2421061992645264
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0010172177571803331,
+      "edit_norm": 1.3637745380401611
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0008104441803880036,
+      "edit_norm": 1.2421061992645264
+     }
+    },
+    "top_8": {
+     "J/J": {
+      "successes": 75,
+      "n": 140,
+      "rate": 0.5357142686843872,
+      "n_nonfinite": 0,
+      "kl": 0.7576626539230347,
+      "edit_norm": 20.68423843383789
+     },
+     "J/L": {
+      "successes": 25,
+      "n": 140,
+      "rate": 0.1785714328289032,
+      "n_nonfinite": 0,
+      "kl": 0.17132829129695892,
+      "edit_norm": 19.836519241333008
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.014258289709687233,
+      "edit_norm": 20.439369201660156
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.011573119089007378,
+      "edit_norm": 19.77182960510254
+     },
+     "L/J": {
+      "successes": 45,
+      "n": 140,
+      "rate": 0.3214285671710968,
+      "n_nonfinite": 0,
+      "kl": 0.314350962638855,
+      "edit_norm": 25.52431869506836
+     },
+     "L/L": {
+      "successes": 55,
+      "n": 140,
+      "rate": 0.3928571343421936,
+      "n_nonfinite": 0,
+      "kl": 0.4196159243583679,
+      "edit_norm": 27.970504760742188
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.015165572054684162,
+      "edit_norm": 25.468652725219727
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01697838306427002,
+      "edit_norm": 27.86639976501465
+     }
+    },
+    "random_8": {
+     "J/J": {
+      "successes": 1,
+      "n": 140,
+      "rate": 0.0071428571827709675,
+      "n_nonfinite": 0,
+      "kl": 0.1680348515510559,
+      "edit_norm": 10.783658981323242
+     },
+     "J/L": {
+      "successes": 1,
+      "n": 140,
+      "rate": 0.0071428571827709675,
+      "n_nonfinite": 0,
+      "kl": 0.05493970587849617,
+      "edit_norm": 7.762307167053223
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010683165863156319,
+      "edit_norm": 10.782039642333984
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004299031104892492,
+      "edit_norm": 7.764074802398682
+     },
+     "L/J": {
+      "successes": 1,
+      "n": 140,
+      "rate": 0.0071428571827709675,
+      "n_nonfinite": 0,
+      "kl": 0.1680348515510559,
+      "edit_norm": 10.783658981323242
+     },
+     "L/L": {
+      "successes": 1,
+      "n": 140,
+      "rate": 0.0071428571827709675,
+      "n_nonfinite": 0,
+      "kl": 0.05493970587849617,
+      "edit_norm": 7.762307167053223
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010683165863156319,
+      "edit_norm": 10.782039642333984
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.004299031104892492,
+      "edit_norm": 7.764074802398682
+     }
+    },
+    "bottom_8": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.06258819997310638,
+      "edit_norm": 16.238046646118164
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010257857851684093,
+      "edit_norm": 8.547750473022461
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0079237325116992,
+      "edit_norm": 16.302936553955078
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0028947212267667055,
+      "edit_norm": 8.560999870300293
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01975153386592865,
+      "edit_norm": 4.675219535827637
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.005027197301387787,
+      "edit_norm": 4.569944381713867
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0044092400930821896,
+      "edit_norm": 4.678848743438721
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0022709278855472803,
+      "edit_norm": 4.570096969604492
+     }
+    },
+    "top_16": {
+     "J/J": {
+      "successes": 83,
+      "n": 140,
+      "rate": 0.5928571224212646,
+      "n_nonfinite": 0,
+      "kl": 0.9779393076896667,
+      "edit_norm": 22.903505325317383
+     },
+     "J/L": {
+      "successes": 27,
+      "n": 140,
+      "rate": 0.19285714626312256,
+      "n_nonfinite": 0,
+      "kl": 0.2361077219247818,
+      "edit_norm": 22.617767333984375
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.018503839150071144,
+      "edit_norm": 22.59348487854004
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.013763278722763062,
+      "edit_norm": 22.542179107666016
+     },
+     "L/J": {
+      "successes": 64,
+      "n": 140,
+      "rate": 0.4571428596973419,
+      "n_nonfinite": 0,
+      "kl": 0.5056372880935669,
+      "edit_norm": 29.552982330322266
+     },
+     "L/L": {
+      "successes": 66,
+      "n": 140,
+      "rate": 0.4714285731315613,
+      "n_nonfinite": 0,
+      "kl": 0.7151276469230652,
+      "edit_norm": 30.6170654296875
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.023670058697462082,
+      "edit_norm": 29.488672256469727
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02127021923661232,
+      "edit_norm": 30.509967803955078
+     }
+    },
+    "random_16": {
+     "J/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.3702365458011627,
+      "edit_norm": 17.176355361938477
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.12376648932695389,
+      "edit_norm": 12.85985279083252
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.025114169344305992,
+      "edit_norm": 17.177141189575195
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.008145269006490707,
+      "edit_norm": 12.867984771728516
+     },
+     "L/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.3702365458011627,
+      "edit_norm": 17.176355361938477
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.12376648932695389,
+      "edit_norm": 12.85985279083252
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.025114169344305992,
+      "edit_norm": 17.177141189575195
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.008145269006490707,
+      "edit_norm": 12.867984771728516
+     }
+    },
+    "bottom_16": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.6183544397354126,
+      "edit_norm": 23.228790283203125
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0971679538488388,
+      "edit_norm": 14.188619613647461
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02619699016213417,
+      "edit_norm": 23.297502517700195
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006769196130335331,
+      "edit_norm": 14.227356910705566
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0479101799428463,
+      "edit_norm": 8.635826110839844
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.011742334812879562,
+      "edit_norm": 6.36181116104126
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010887990705668926,
+      "edit_norm": 8.640058517456055
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0038884817622601986,
+      "edit_norm": 6.360288143157959
+     }
+    },
+    "top_32": {
+     "J/J": {
+      "successes": 88,
+      "n": 140,
+      "rate": 0.6285714507102966,
+      "n_nonfinite": 0,
+      "kl": 1.7285596132278442,
+      "edit_norm": 29.872608184814453
+     },
+     "J/L": {
+      "successes": 32,
+      "n": 140,
+      "rate": 0.22857142984867096,
+      "n_nonfinite": 0,
+      "kl": 0.34274572134017944,
+      "edit_norm": 27.063383102416992
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.03597639128565788,
+      "edit_norm": 29.451786041259766
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.020091895014047623,
+      "edit_norm": 27.01390266418457
+     },
+     "L/J": {
+      "successes": 45,
+      "n": 140,
+      "rate": 0.3214285671710968,
+      "n_nonfinite": 0,
+      "kl": 0.3989790380001068,
+      "edit_norm": 32.73564529418945
+     },
+     "L/L": {
+      "successes": 64,
+      "n": 140,
+      "rate": 0.4571428596973419,
+      "n_nonfinite": 0,
+      "kl": 0.7359189987182617,
+      "edit_norm": 33.268184661865234
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.03589516505599022,
+      "edit_norm": 32.60516357421875
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02644888497889042,
+      "edit_norm": 33.11012268066406
+     }
+    },
+    "random_32": {
+     "J/J": {
+      "successes": 12,
+      "n": 140,
+      "rate": 0.08571428805589676,
+      "n_nonfinite": 0,
+      "kl": 0.7578676342964172,
+      "edit_norm": 25.549440383911133
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.21476751565933228,
+      "edit_norm": 18.701045989990234
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.044088274240493774,
+      "edit_norm": 25.537887573242188
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01435465645045042,
+      "edit_norm": 18.700448989868164
+     },
+     "L/J": {
+      "successes": 12,
+      "n": 140,
+      "rate": 0.08571428805589676,
+      "n_nonfinite": 0,
+      "kl": 0.7578676342964172,
+      "edit_norm": 25.549440383911133
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.21476751565933228,
+      "edit_norm": 18.701045989990234
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.044088274240493774,
+      "edit_norm": 25.537887573242188
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01435465645045042,
+      "edit_norm": 18.700448989868164
+     }
+    },
+    "bottom_32": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 2.59507417678833,
+      "edit_norm": 33.89545822143555
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.35548216104507446,
+      "edit_norm": 19.032508850097656
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.10304399579763412,
+      "edit_norm": 33.897850036621094
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.016970714554190636,
+      "edit_norm": 19.116594314575195
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.08375662565231323,
+      "edit_norm": 13.812068939208984
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02112148515880108,
+      "edit_norm": 9.095717430114746
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02031542919576168,
+      "edit_norm": 13.798052787780762
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.006334218662232161,
+      "edit_norm": 9.087600708007812
+     }
+    },
+    "top_64": {
+     "J/J": {
+      "successes": 95,
+      "n": 140,
+      "rate": 0.6785714030265808,
+      "n_nonfinite": 0,
+      "kl": 1.7688965797424316,
+      "edit_norm": 36.31007766723633
+     },
+     "J/L": {
+      "successes": 39,
+      "n": 140,
+      "rate": 0.2785714268684387,
+      "n_nonfinite": 0,
+      "kl": 0.4966999590396881,
+      "edit_norm": 31.571840286254883
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.06545865535736084,
+      "edit_norm": 35.76332473754883
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.02832035906612873,
+      "edit_norm": 31.56366539001465
+     },
+     "L/J": {
+      "successes": 40,
+      "n": 140,
+      "rate": 0.2857142984867096,
+      "n_nonfinite": 0,
+      "kl": 3.379756212234497,
+      "edit_norm": 46.90406036376953
+     },
+     "L/L": {
+      "successes": 71,
+      "n": 140,
+      "rate": 0.5071428418159485,
+      "n_nonfinite": 0,
+      "kl": 1.5027018785476685,
+      "edit_norm": 37.4767951965332
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.15813133120536804,
+      "edit_norm": 46.88298797607422
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.041464149951934814,
+      "edit_norm": 37.324893951416016
+     }
+    },
+    "random_64": {
+     "J/J": {
+      "successes": 19,
+      "n": 140,
+      "rate": 0.13571429252624512,
+      "n_nonfinite": 0,
+      "kl": 1.7375751733779907,
+      "edit_norm": 37.1481819152832
+     },
+     "J/L": {
+      "successes": 7,
+      "n": 140,
+      "rate": 0.05000000074505806,
+      "n_nonfinite": 0,
+      "kl": 0.437537282705307,
+      "edit_norm": 27.72305679321289
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.1011066809296608,
+      "edit_norm": 37.17640686035156
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.026088349521160126,
+      "edit_norm": 27.756948471069336
+     },
+     "L/J": {
+      "successes": 19,
+      "n": 140,
+      "rate": 0.13571429252624512,
+      "n_nonfinite": 0,
+      "kl": 1.7375751733779907,
+      "edit_norm": 37.1481819152832
+     },
+     "L/L": {
+      "successes": 7,
+      "n": 140,
+      "rate": 0.05000000074505806,
+      "n_nonfinite": 0,
+      "kl": 0.437537282705307,
+      "edit_norm": 27.72305679321289
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.1011066809296608,
+      "edit_norm": 37.17640686035156
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.026088349521160126,
+      "edit_norm": 27.756948471069336
+     }
+    },
+    "bottom_64": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 2.8436248302459717,
+      "edit_norm": 39.81485366821289
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.3940771520137787,
+      "edit_norm": 24.517581939697266
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.13656531274318695,
+      "edit_norm": 39.774208068847656
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.022717179730534554,
+      "edit_norm": 24.612438201904297
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.17117710411548615,
+      "edit_norm": 25.123937606811523
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.04664846137166023,
+      "edit_norm": 14.201197624206543
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.043481990694999695,
+      "edit_norm": 25.10674285888672
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.010404149070382118,
+      "edit_norm": 14.165542602539062
+     }
+    },
+    "active": {
+     "J/J": {
+      "successes": 90,
+      "n": 140,
+      "rate": 0.6428571343421936,
+      "n_nonfinite": 0,
+      "kl": 4.0957512855529785,
+      "edit_norm": 37.066978454589844
+     },
+     "J/L": {
+      "successes": 28,
+      "n": 140,
+      "rate": 0.20000000298023224,
+      "n_nonfinite": 0,
+      "kl": 0.7282605767250061,
+      "edit_norm": 25.29368782043457
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.09765603393316269,
+      "edit_norm": 36.758567810058594
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.020028850063681602,
+      "edit_norm": 25.247465133666992
+     },
+     "L/J": {
+      "successes": 43,
+      "n": 140,
+      "rate": 0.30714285373687744,
+      "n_nonfinite": 0,
+      "kl": 1.3152825832366943,
+      "edit_norm": 31.786014556884766
+     },
+     "L/L": {
+      "successes": 56,
+      "n": 140,
+      "rate": 0.4000000059604645,
+      "n_nonfinite": 0,
+      "kl": 0.7365201711654663,
+      "edit_norm": 31.528968811035156
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.044105686247348785,
+      "edit_norm": 31.726642608642578
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.022670993581414223,
+      "edit_norm": 31.43755531311035
+     }
+    },
+    "random_active": {
+     "J/J": {
+      "successes": 3,
+      "n": 140,
+      "rate": 0.02142857201397419,
+      "n_nonfinite": 0,
+      "kl": 0.3390747010707855,
+      "edit_norm": 16.980886459350586
+     },
+     "J/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.11973579972982407,
+      "edit_norm": 12.738056182861328
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.023399824276566505,
+      "edit_norm": 16.97944450378418
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.008054517209529877,
+      "edit_norm": 12.747467041015625
+     },
+     "L/J": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.26852819323539734,
+      "edit_norm": 15.50194263458252
+     },
+     "L/L": {
+      "successes": 2,
+      "n": 140,
+      "rate": 0.014285714365541935,
+      "n_nonfinite": 0,
+      "kl": 0.09298279881477356,
+      "edit_norm": 11.593900680541992
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.01971067674458027,
+      "edit_norm": 15.503862380981445
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.007096725050359964,
+      "edit_norm": 11.601508140563965
+     }
+    },
+    "bottom_active": {
+     "J/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.35604241490364075,
+      "edit_norm": 21.196094512939453
+     },
+     "J/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.06237586587667465,
+      "edit_norm": 13.356511116027832
+     },
+     "J/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.020610610023140907,
+      "edit_norm": 21.249048233032227
+     },
+     "J/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.00619672192260623,
+      "edit_norm": 13.399866104125977
+     },
+     "L/J": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.041728612035512924,
+      "edit_norm": 7.326239109039307
+     },
+     "L/L": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.009169299155473709,
+      "edit_norm": 5.888815879821777
+     },
+     "L/J_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.007232155185192823,
+      "edit_norm": 7.3295488357543945
+     },
+     "L/L_rand": {
+      "successes": 0,
+      "n": 140,
+      "rate": 0.0,
+      "n_nonfinite": 0,
+      "kl": 0.0032176251988857985,
+      "edit_norm": 5.887351989746094
+     }
+    }
+   },
+   "contrasts": {
+    "top_1": {
+     "end_to_end": {
+      "mean": 0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.03571428571428571,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.04285714285714286,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": -0.02857142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.02142857142857143,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_1": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_8": {
+     "end_to_end": {
+      "mean": 0.14285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.35714285714285715,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.21428571428571427,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.21428571428571427,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_8": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_16": {
+     "end_to_end": {
+      "mean": 0.12142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.4,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.014285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.1357142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.2785714285714286,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_16": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_32": {
+     "end_to_end": {
+      "mean": 0.17142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.4,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.1357142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.30714285714285716,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.22857142857142856,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_32": {
+     "end_to_end": {
+      "mean": 0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.07142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_32": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "top_64": {
+     "end_to_end": {
+      "mean": 0.17142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.4,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.22142857142857142,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.39285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.22857142857142856,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_64": {
+     "end_to_end": {
+      "mean": 0.08571428571428572,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.08571428571428572,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.08571428571428572,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_64": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "active": {
+     "end_to_end": {
+      "mean": 0.24285714285714285,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.44285714285714284,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": -0.09285714285714286,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.3357142857142857,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": -0.2,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "random_active": {
+     "end_to_end": {
+      "mean": 0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.007142857142857143,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    },
+    "bottom_active": {
+     "end_to_end": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_J_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "direction_at_L_sites": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_J_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     },
+     "selection_with_L_edit": {
+      "mean": 0.0,
+      "prompts": 14,
+      "trials": 140
+     }
+    }
+   },
+   "layer_wide": {
+    "J": {
+     "successes": 40,
+     "n": 140,
+     "rate": 0.2857142984867096,
+     "n_nonfinite": 0,
+     "kl": 3.7053396701812744,
+     "edit_norm": 19.332544326782227
+    },
+    "L": {
+     "successes": 39,
+     "n": 140,
+     "rate": 0.2785714268684387,
+     "n_nonfinite": 0,
+     "kl": 2.110083818435669,
+     "edit_norm": 14.71222972869873
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.9664932489395142,
+     "edit_norm": 66.29615020751953
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.2559396028518677,
+     "edit_norm": 41.819252014160156
+    }
+   },
+   "layer_wide_contrast": {
+    "mean": 0.007142857142857143,
+    "prompts": 14,
+    "trials": 140
+   },
+   "layer_wide_band": {
+    "J": {
+     "successes": 39,
+     "n": 140,
+     "rate": 0.2785714268684387,
+     "n_nonfinite": 0,
+     "kl": 3.1177563667297363,
+     "edit_norm": 17.55720329284668
+    },
+    "L": {
+     "successes": 37,
+     "n": 140,
+     "rate": 0.26428571343421936,
+     "n_nonfinite": 0,
+     "kl": 1.51786208152771,
+     "edit_norm": 12.138792037963867
+    },
+    "J_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.5666896104812622,
+     "edit_norm": 57.569339752197266
+    },
+    "L_rand": {
+     "successes": 0,
+     "n": 140,
+     "rate": 0.0,
+     "n_nonfinite": 0,
+     "kl": 0.17234277725219727,
+     "edit_norm": 32.97197723388672
+    }
+   }
+  }
+ ],
+ "paper_protocol": [
+  {
+   "task": "probe-swap",
+   "alpha": 1.0,
+   "scope": "layer_wide",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 27,
+    "top5": 43
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 14,
+    "top5": 21
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 1.0,
+   "scope": "layer_wide",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 10,
+    "top5": 34
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 4,
+    "top5": 13
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 1.0,
+   "scope": "layer_wide_band",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 25,
+    "top5": 44
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 14,
+    "top5": 23
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 1.0,
+   "scope": "layer_wide_band",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 8,
+    "top5": 31
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 5,
+    "top5": 10
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 2.0,
+   "scope": "layer_wide",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 20,
+    "top5": 42
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 10,
+    "top5": 20
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 2.0,
+   "scope": "layer_wide",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 19,
+    "top5": 38
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 8,
+    "top5": 16
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 2.0,
+   "scope": "layer_wide_band",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 20,
+    "top5": 42
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 10,
+    "top5": 21
+   }
+  },
+  {
+   "task": "probe-swap",
+   "alpha": 2.0,
+   "scope": "layer_wide_band",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 53,
+    "top1": 17,
+    "top5": 39
+   },
+   "outside_clean_top10": {
+    "n": 31,
+    "top1": 7,
+    "top5": 17
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 1.0,
+   "scope": "layer_wide",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 30,
+    "top5": 39
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 30,
+    "top5": 39
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 1.0,
+   "scope": "layer_wide",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 10,
+    "top5": 30
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 10,
+    "top5": 30
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 1.0,
+   "scope": "layer_wide_band",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 27,
+    "top5": 35
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 27,
+    "top5": 35
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 1.0,
+   "scope": "layer_wide_band",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 6,
+    "top5": 21
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 6,
+    "top5": 21
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 2.0,
+   "scope": "layer_wide",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 40,
+    "top5": 44
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 40,
+    "top5": 44
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 2.0,
+   "scope": "layer_wide",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 39,
+    "top5": 42
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 39,
+    "top5": 42
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 2.0,
+   "scope": "layer_wide_band",
+   "lens": "J",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 39,
+    "top5": 41
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 39,
+    "top5": 41
+   }
+  },
+  {
+   "task": "verbal-report",
+   "alpha": 2.0,
+   "scope": "layer_wide_band",
+   "lens": "L",
+   "n_degenerate": 0,
+   "all": {
+    "n": 140,
+    "top1": 37,
+    "top5": 42
+   },
+   "outside_clean_top10": {
+    "n": 131,
+    "top1": 37,
+    "top5": 42
+   }
+  }
+ ],
+ "rank_deficient_maps": {},
+ "shards": [
+  {
+   "timestamp": "2026-10-12T11:19:19+00:00",
+   "git": {
+    "sha": "c6a4e2654bdde1046527e08598205f5172a1c3dd",
+    "dirty": true
+   },
+   "versions": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.15.0"
+   },
+   "stage": "write_swap_sites",
+   "model": "Qwen/Qwen3.5-4B",
+   "jz_path": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n1000.pt",
+   "jz_sha256": "249929f24139c4f2722645cc0308ff5fd509455240db5890391c369094a74fa6",
+   "gpu": "NVIDIA A100 80GB PCIe",
+   "seconds": 385.9646254219115
+  },
+  {
+   "timestamp": "2026-10-12T11:19:01+00:00",
+   "git": {
+    "sha": "c6a4e2654bdde1046527e08598205f5172a1c3dd",
+    "dirty": true
+   },
+   "versions": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.15.0"
+   },
+   "stage": "write_swap_sites",
+   "model": "Qwen/Qwen3.5-4B",
+   "jz_path": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n1000.pt",
+   "jz_sha256": "249929f24139c4f2722645cc0308ff5fd509455240db5890391c369094a74fa6",
+   "gpu": "NVIDIA A100 80GB PCIe",
+   "seconds": 367.8144827000797
+  },
+  {
+   "timestamp": "2026-10-12T11:19:01+00:00",
+   "git": {
+    "sha": "c6a4e2654bdde1046527e08598205f5172a1c3dd",
+    "dirty": true
+   },
+   "versions": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.15.0"
+   },
+   "stage": "write_swap_sites",
+   "model": "Qwen/Qwen3.5-4B",
+   "jz_path": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n1000.pt",
+   "jz_sha256": "249929f24139c4f2722645cc0308ff5fd509455240db5890391c369094a74fa6",
+   "gpu": "NVIDIA A100 80GB PCIe",
+   "seconds": 368.67851104587317
+  }
+ ]
+}

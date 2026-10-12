@@ -1,0 +1,982 @@
+{
+ "meta": {
+  "timestamp": "2026-10-12T12:04:13+00:00",
+  "git": {
+   "sha": "9e18aa2d1c89dc10fd7dbe46f9337f0f6c815e1c",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "stage": "loading_rank",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "jz_path": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n1000.pt",
+  "jz_sha256": "07a9a25aead37574c16829c3569ca1b2be567e7246bd71b14040d102a2caa323",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "seconds": 42.91672382503748
+ },
+ "configuration": {
+  "readouts": {
+   "J": "J-head: J^z head blocks",
+   "L": "Logit-head: residual W_O head blocks"
+  },
+  "layers": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31
+  ],
+  "position": "final",
+  "token": "the swap's source_id",
+  "null": {
+   "n_tokens": 256,
+   "seed": 0,
+   "quantile": 0.99
+  },
+  "rank": "0-based count of vocabulary tokens scoring strictly higher in the readout",
+  "code_sha256": {
+   "scripts/loading_rank.py": "84779e250dde08a005e73fd9cd22e14257ff292334b4e675b395e9db81a49fb5",
+   "src/loading_rank.py": "f81ea16bf10db405dab677d42f21179a349a51cee89bfe3da3c2d26932cace59",
+   "src/sites.py": "254995950b601405a261df18a5ed85f046f2dd7cc1055bdebd588f5eb9a97454",
+   "src/readout.py": "e62e143e1804cdc91a23bc575979d23c1fe3f0cf988d00b7dfe429e140007595",
+   "src/heads.py": "22c200da3ee2e360a4ea042845d62b51b955e5fbf8ab9e4789b0ac17e8171f53",
+   "src/tasks.py": "a184d9ca0275b4e1d4b4c1dd75c0a7be6544b37ac07bc765f9fe7ab03a49bd45"
+  }
+ },
+ "axes": {
+  "loading": [
+   "prompt",
+   "readout",
+   "layer",
+   "head"
+  ],
+  "rank": [
+   "prompt",
+   "readout",
+   "layer",
+   "head"
+  ],
+  "tau": [
+   "prompt",
+   "readout",
+   "layer",
+   "head"
+  ]
+ },
+ "prompts": [
+  {
+   "prompt_key": "verbal-report:country",
+   "task": "verbal-report",
+   "source_id": 6457,
+   "source": " Japan",
+   "trial_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:color",
+   "task": "verbal-report",
+   "source_id": 8868,
+   "source": " Blue",
+   "trial_indices": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:fruit",
+   "task": "verbal-report",
+   "source_id": 8325,
+   "source": " Apple",
+   "trial_indices": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:sport",
+   "task": "verbal-report",
+   "source_id": 21424,
+   "source": " Football",
+   "trial_indices": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:instrument",
+   "task": "verbal-report",
+   "source_id": 47759,
+   "source": " Guitar",
+   "trial_indices": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:planet",
+   "task": "verbal-report",
+   "source_id": 21725,
+   "source": " Mars",
+   "trial_indices": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:tree",
+   "task": "verbal-report",
+   "source_id": 18787,
+   "source": " Oak",
+   "trial_indices": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:bird",
+   "task": "verbal-report",
+   "source_id": 70906,
+   "source": " Spar",
+   "trial_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:language",
+   "task": "verbal-report",
+   "source_id": 6498,
+   "source": " English",
+   "trial_indices": [
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:profession",
+   "task": "verbal-report",
+   "source_id": 19150,
+   "source": " Doctor",
+   "trial_indices": [
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:beverage",
+   "task": "verbal-report",
+   "source_id": 27171,
+   "source": " Coffee",
+   "trial_indices": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:organ",
+   "task": "verbal-report",
+   "source_id": 22617,
+   "source": " Liver",
+   "trial_indices": [
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:city",
+   "task": "verbal-report",
+   "source_id": 12366,
+   "source": " Paris",
+   "trial_indices": [
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129
+   ]
+  },
+  {
+   "prompt_key": "verbal-report:river",
+   "task": "verbal-report",
+   "source_id": 330,
+   "source": " \"",
+   "trial_indices": [
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:animal-cover-turtle",
+   "task": "probe-swap",
+   "source_id": 37189,
+   "source": " turtle",
+   "trial_indices": [
+    140
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:animal-nose-elephant",
+   "task": "probe-swap",
+   "source_id": 46840,
+   "source": " elephant",
+   "trial_indices": [
+    141
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:birthstone-emerald-month",
+   "task": "probe-swap",
+   "source_id": 3297,
+   "source": " May",
+   "trial_indices": [
+    142
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:chem-organic-Z",
+   "task": "probe-swap",
+   "source_id": 12782,
+   "source": " carbon",
+   "trial_indices": [
+    143
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:city-state-Philadelphia",
+   "task": "probe-swap",
+   "source_id": 19895,
+   "source": " Philadelphia",
+   "trial_indices": [
+    144
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:etym-saturn-position",
+   "task": "probe-swap",
+   "source_id": 50253,
+   "source": " Saturn",
+   "trial_indices": [
+    145
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-capital-Barcelona-Toronto",
+   "task": "probe-swap",
+   "source_id": 18157,
+   "source": " Spain",
+   "trial_indices": [
+    146
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-capital-Lyon-Naples",
+   "task": "probe-swap",
+   "source_id": 9822,
+   "source": " France",
+   "trial_indices": [
+    147
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-capital-Naples-Barcelona",
+   "task": "probe-swap",
+   "source_id": 15704,
+   "source": " Italy",
+   "trial_indices": [
+    148
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-capital-Toronto-Lyon",
+   "task": "probe-swap",
+   "source_id": 7008,
+   "source": " Canada",
+   "trial_indices": [
+    149
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-continent-Toronto-Lyon",
+   "task": "probe-swap",
+   "source_id": 7008,
+   "source": " Canada",
+   "trial_indices": [
+    150
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-currency-Toronto-Beijing",
+   "task": "probe-swap",
+   "source_id": 7008,
+   "source": " Canada",
+   "trial_indices": [
+    151
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-currency-Toronto-Mumbai",
+   "task": "probe-swap",
+   "source_id": 7008,
+   "source": " Canada",
+   "trial_indices": [
+    152
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-city-language-Lyon-Naples",
+   "task": "probe-swap",
+   "source_id": 9822,
+   "source": " France",
+   "trial_indices": [
+    153
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-element-state-26-8",
+   "task": "probe-swap",
+   "source_id": 11245,
+   "source": " iron",
+   "trial_indices": [
+    154
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-element-state-26-80",
+   "task": "probe-swap",
+   "source_id": 11245,
+   "source": " iron",
+   "trial_indices": [
+    155
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-element-symbol-11-26",
+   "task": "probe-swap",
+   "source_id": 39695,
+   "source": " sodium",
+   "trial_indices": [
+    156
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex-element-symbol-26-79",
+   "task": "probe-swap",
+   "source_id": 11245,
+   "source": " iron",
+   "trial_indices": [
+    157
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-city-capital-Munich",
+   "task": "probe-swap",
+   "source_id": 10057,
+   "source": " Germany",
+   "trial_indices": [
+    158
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-city-capital-Osaka",
+   "task": "probe-swap",
+   "source_id": 6457,
+   "source": " Japan",
+   "trial_indices": [
+    159
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-city-continent-Lima",
+   "task": "probe-swap",
+   "source_id": 48847,
+   "source": " Peru",
+   "trial_indices": [
+    160
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-city-language-Cairo",
+   "task": "probe-swap",
+   "source_id": 15212,
+   "source": " Egypt",
+   "trial_indices": [
+    161
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-city-language-Moscow",
+   "task": "probe-swap",
+   "source_id": 8524,
+   "source": " Russia",
+   "trial_indices": [
+    162
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-language-capital-Greek",
+   "task": "probe-swap",
+   "source_id": 25431,
+   "source": " Greece",
+   "trial_indices": [
+    163
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-language-capital-Hungarian",
+   "task": "probe-swap",
+   "source_id": 43876,
+   "source": " Hungary",
+   "trial_indices": [
+    164
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-language-capital-Polish",
+   "task": "probe-swap",
+   "source_id": 28702,
+   "source": " Poland",
+   "trial_indices": [
+    165
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-language-capital-Swedish",
+   "task": "probe-swap",
+   "source_id": 24067,
+   "source": " Sweden",
+   "trial_indices": [
+    166
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:ex2-river-capital-Thames",
+   "task": "probe-swap",
+   "source_id": 9635,
+   "source": " England",
+   "trial_indices": [
+    167
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:food-animal-butter",
+   "task": "probe-swap",
+   "source_id": 14432,
+   "source": " butter",
+   "trial_indices": [
+    168
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:func-filters-count",
+   "task": "probe-swap",
+   "source_id": 39042,
+   "source": " kidney",
+   "trial_indices": [
+    169
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:func-pumps-chambers",
+   "task": "probe-swap",
+   "source_id": 4851,
+   "source": " heart",
+   "trial_indices": [
+    170
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:holiday-month-christmas2",
+   "task": "probe-swap",
+   "source_id": 10280,
+   "source": " Christmas",
+   "trial_indices": [
+    171
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:instr-body-trumpet",
+   "task": "probe-swap",
+   "source_id": 92359,
+   "source": " trumpet",
+   "trial_indices": [
+    172
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:month-3-godof",
+   "task": "probe-swap",
+   "source_id": 21725,
+   "source": " Mars",
+   "trial_indices": [
+    173
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:organ-location-brain",
+   "task": "probe-swap",
+   "source_id": 8271,
+   "source": " brain",
+   "trial_indices": [
+    174
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:organ-location-heart",
+   "task": "probe-swap",
+   "source_id": 4851,
+   "source": " heart",
+   "trial_indices": [
+    175
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:person-firstname-darwin",
+   "task": "probe-swap",
+   "source_id": 45480,
+   "source": " Darwin",
+   "trial_indices": [
+    176
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:person-firstname-einstein",
+   "task": "probe-swap",
+   "source_id": 55152,
+   "source": " Einstein",
+   "trial_indices": [
+    177
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:person-firstname-mozart",
+   "task": "probe-swap",
+   "source_id": 95769,
+   "source": " Mozart",
+   "trial_indices": [
+    178
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:person-firstname-newton",
+   "task": "probe-swap",
+   "source_id": 21324,
+   "source": " Newton",
+   "trial_indices": [
+    179
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:person-firstname-shakespeare",
+   "task": "probe-swap",
+   "source_id": 42482,
+   "source": " Shakespeare",
+   "trial_indices": [
+    180
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:spider-legs",
+   "task": "probe-swap",
+   "source_id": 35454,
+   "source": " spider",
+   "trial_indices": [
+    181
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:sport-equip-tennis",
+   "task": "probe-swap",
+   "source_id": 32515,
+   "source": " tennis",
+   "trial_indices": [
+    182
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:vehicle-power-bicycle",
+   "task": "probe-swap",
+   "source_id": 36086,
+   "source": " bicycle",
+   "trial_indices": [
+    183
+   ]
+  },
+  {
+   "prompt_key": "probe-swap:violin-strings",
+   "task": "probe-swap",
+   "source_id": 63137,
+   "source": " violin",
+   "trial_indices": [
+    184
+   ]
+  }
+ ],
+ "check_against_swap_record": {
+  "record": "write_swap_sites_clamp",
+  "trials_checked": 185,
+  "prompts_mismatched": []
+ },
+ "summary": {
+  "verbal-report": {
+   "n_prompts": 14,
+   "J": {
+    "spearman": [
+     0.9448746327004499,
+     0.9455231026822811,
+     0.9341395394673921,
+     0.9414868350165562,
+     0.9256080131676702,
+     0.9381673243025859,
+     0.9334618991856853,
+     0.9321445413781759,
+     0.9500286109564695,
+     0.9434682886059926,
+     0.9296550995470441,
+     0.9293549492842119,
+     0.9487817074820166,
+     0.9253039159134461
+    ],
+    "spearman_quartiles": [
+     0.930277460004827,
+     0.936153431884989,
+     0.9445230466768356
+    ],
+    "share_best_read": {
+     "1": 0.07142857142857142,
+     "8": 0.39285714285714285,
+     "16": 0.5647321428571429,
+     "32": 0.6294642857142857,
+     "64": 0.6372767857142857,
+     "active": 0.7425272207535573
+    },
+    "chance": {
+     "1": 0.0009765625,
+     "8": 0.0078125,
+     "16": 0.015625,
+     "32": 0.03125,
+     "64": 0.0625
+    }
+   },
+   "L": {
+    "spearman": [
+     0.9603816644048869,
+     0.9646595059270555,
+     0.9621643036121414,
+     0.9555734981231994,
+     0.9470730274998356,
+     0.9636442501005784,
+     0.9663852499550493,
+     0.9652150116189504,
+     0.9649706236081105,
+     0.9602623475653735,
+     0.9573147954885592,
+     0.9615635612791866,
+     0.9622694914333458,
+     0.976101759712165
+    ],
+    "spearman_quartiles": [
+     0.9602921767752519,
+     0.9622168975227436,
+     0.9648928441878467
+    ],
+    "share_best_read": {
+     "1": 0.16071428571428573,
+     "8": 0.5669642857142857,
+     "16": 0.7098214285714286,
+     "32": 0.7232142857142857,
+     "64": 0.7511160714285714,
+     "active": 0.789214217026963
+    },
+    "chance": {
+     "1": 0.0009765625,
+     "8": 0.0078125,
+     "16": 0.015625,
+     "32": 0.03125,
+     "64": 0.0625
+    }
+   }
+  },
+  "probe-swap": {
+   "n_prompts": 45,
+   "J": {
+    "spearman": [
+     0.9354074373091006,
+     0.9408616318671504,
+     0.9485982877604295,
+     0.932461141800689,
+     0.946093880127012,
+     0.9451679036868751,
+     0.9478463603236008,
+     0.9548838334741169,
+     0.9504654786155154,
+     0.9583704094458431,
+     0.9566158454099418,
+     0.9518550445946876,
+     0.9518550445946876,
+     0.9538734935062033,
+     0.9513454185891886,
+     0.9513454185891886,
+     0.9297111641436498,
+     0.9504333524967109,
+     0.9472785763594077,
+     0.9478350565507868,
+     0.9419017442436567,
+     0.9472617293155221,
+     0.9471263158508563,
+     0.9543727797391723,
+     0.9353827321107898,
+     0.948300267990626,
+     0.9511515026450551,
+     0.9587313035839725,
+     0.9307871355419577,
+     0.9131554355722823,
+     0.9516023177728724,
+     0.9586582689321704,
+     0.9299426777290836,
+     0.9302033693355515,
+     0.9585232661868397,
+     0.9523845121656721,
+     0.9413082016953677,
+     0.9393186304467529,
+     0.9381246066369532,
+     0.9353538582405622,
+     0.9522333682286719,
+     0.9331600196175853,
+     0.9326990858928929,
+     0.9269210720342377,
+     0.9248023696177486
+    ],
+    "spearman_quartiles": [
+     0.9353827321107898,
+     0.9472785763594077,
+     0.9518550445946876
+    ],
+    "share_best_read": {
+     "1": 0.12416225749559084,
+     "8": 0.5045590828924162,
+     "16": 0.6145833333333334,
+     "32": 0.6766203703703704,
+     "64": 0.7024305555555556,
+     "active": 0.804427831016097
+    },
+    "chance": {
+     "1": 0.0009765625,
+     "8": 0.0078125,
+     "16": 0.015625,
+     "32": 0.03125,
+     "64": 0.0625
+    }
+   },
+   "L": {
+    "spearman": [
+     0.9533020951607049,
+     0.9584058358173755,
+     0.9685191108195652,
+     0.9661526286188687,
+     0.9491351974041292,
+     0.9561487853836722,
+     0.9565026412492172,
+     0.9597356953142159,
+     0.957439107020217,
+     0.9630084848133319,
+     0.9622310345913385,
+     0.9624906364620284,
+     0.9624906364620284,
+     0.9603471237916119,
+     0.966431501341634,
+     0.966431501341634,
+     0.9573828063167034,
+     0.9660128443347501,
+     0.9558429960053432,
+     0.9579872638810296,
+     0.9496077845268772,
+     0.9561794787181987,
+     0.950317952719717,
+     0.9534549783614967,
+     0.9509208430856301,
+     0.9623666040468974,
+     0.961097054800133,
+     0.9583514593327954,
+     0.961739452679185,
+     0.95722087509693,
+     0.9650977436409867,
+     0.9667064047504839,
+     0.9570481528008127,
+     0.9651285640602728,
+     0.9700364310297825,
+     0.9710249794577644,
+     0.9652868062603579,
+     0.9612803309098098,
+     0.9580598606712882,
+     0.9664106024427785,
+     0.9636069315455678,
+     0.9627744678510312,
+     0.9504313914064573,
+     0.9391313595139315,
+     0.9459056204955923
+    ],
+    "spearman_quartiles": [
+     0.9561794787181987,
+     0.9603471237916119,
+     0.9650977436409867
+    ],
+    "share_best_read": {
+     "1": 0.24962962962962965,
+     "8": 0.6666666666666666,
+     "16": 0.7430555555555556,
+     "32": 0.7576388888888889,
+     "64": 0.7770833333333333,
+     "active": 0.8214751610760154
+    },
+    "chance": {
+     "1": 0.0009765625,
+     "8": 0.0078125,
+     "16": 0.015625,
+     "32": 0.03125,
+     "64": 0.0625
+    }
+   }
+  }
+ },
+ "arrays_sha256": "c3b6189653166394365392b405fcdff72b1c7e7febbfa4f38aa8529bcebe1549"
+}

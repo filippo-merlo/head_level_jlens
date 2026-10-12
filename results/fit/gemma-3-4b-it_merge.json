@@ -1,0 +1,70 @@
+{
+ "meta": {
+  "timestamp": "2026-09-16T00:05:07+00:00",
+  "git": {
+   "sha": "832906566ea60f38228d13b0e8217000213f3d63",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "google/gemma-3-4b-it",
+  "lens_key": "gemma-3-4b-it",
+  "shards": [
+   "a0",
+   "a1",
+   "a2",
+   "a3"
+  ],
+  "merge": "n_prompts-weighted mean over disjoint corpus slices"
+ },
+ "shards": {
+  "a0": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 0,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/gemma-3-4b-it_Jzfit_n250_a0.pt",
+   "lens_sha256": "c183f8d79174984dfed55c2a3e2cc9592f6d76ef5aaf5935918e98f13513784a"
+  },
+  "a1": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 250,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/gemma-3-4b-it_Jzfit_n250_a1.pt",
+   "lens_sha256": "3cfa13804f614284ec4537396b14cf8a1db28c6b99ecb7b3a9d1c725238e3b8f"
+  },
+  "a2": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 500,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/gemma-3-4b-it_Jzfit_n250_a2.pt",
+   "lens_sha256": "44461a0f2d2b68a7958b9fcdf87a4d6b787a16a8da226ed09bd47c53a817467c"
+  },
+  "a3": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 750,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/gemma-3-4b-it_Jzfit_n250_a3.pt",
+   "lens_sha256": "13f06fbfb848b166dcd70e24a1d079b198307422646976a0fcd676a093c95c10"
+  }
+ },
+ "result": {
+  "prompts_fitted": 1000,
+  "n_layers": 34,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/gemma-3-4b-it_Jzfit_n1000.pt",
+  "lens_sha256": "5c9f6f1263f496a4569f7c46d0c3469fcefb61f1633e9ce549338544269dc6e9"
+ }
+}

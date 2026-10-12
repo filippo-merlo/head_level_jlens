@@ -1,0 +1,72 @@
+{
+ "meta": {
+  "timestamp": "2026-08-13T18:10:00+00:00",
+  "git": {
+   "sha": "ecb41fdab8430098d14c20c2151366346ea0f056",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "lens_key": "llama3.1-8b-it",
+  "shards": [
+   "a0",
+   "a1",
+   "a2",
+   "a3"
+  ],
+  "shard": null,
+  "merge": "n_prompts-weighted mean over disjoint corpus slices"
+ },
+ "shards": {
+  "a0": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 0,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n250_a0.pt",
+   "lens_sha256": "9eba78690f332368057bfdbf309f7044864c81cedce5a39580db4435f6df3ab5"
+  },
+  "a1": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 250,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n250_a1.pt",
+   "lens_sha256": "f592732c47a46d40921889f707053b771bb576cad1df9e53ecdd9ddd5bd5ab0b"
+  },
+  "a2": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 500,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n250_a2.pt",
+   "lens_sha256": "9262f4cfad103ee87d1473260f4dede56f3637829d159fddedc682a083fd8a0b"
+  },
+  "a3": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 750,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n250_a3.pt",
+   "lens_sha256": "af016e5a49d29f41ccc0da011af0852902edd5f2bc3a807174905147a06fdd0a"
+  }
+ },
+ "result": {
+  "prompts_fitted": 1000,
+  "n_layers": 32,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/llama3.1-8b-it_Jzfit_n1000.pt",
+  "lens_sha256": "07a9a25aead37574c16829c3569ca1b2be567e7246bd71b14040d102a2caa323"
+ },
+ "estimator_noise": null
+}

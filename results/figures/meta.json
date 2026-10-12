@@ -1,0 +1,43 @@
+{
+ "timestamp": "2026-10-12T13:12:21+00:00",
+ "git": {
+  "sha": "d57b45b5b11bd510880dab1123629c5d6803ac12",
+  "dirty": true
+ },
+ "versions": {
+  "torch": "2.13.0+cu130",
+  "transformers": "5.15.0"
+ },
+ "model": "meta-llama/Llama-3.1-8B-Instruct",
+ "lens_key": "llama3.1-8b-it",
+ "inputs": {
+  "read": {
+   "timestamp": "2026-10-12T12:29:34+00:00",
+   "git": {
+    "sha": "f0cae683f79bd0f067e85a9544bd70a730f71c75",
+    "dirty": true
+   }
+  },
+  "write": {
+   "timestamp": "2026-09-28T18:02:30+00:00",
+   "git": {
+    "sha": "4a5d41b53ca4178dda48bc27ef0d254ca6a0d3bc",
+    "dirty": true
+   }
+  }
+ },
+ "swap_summaries": [
+  "results/write_swap_sites_clamp/summary.json"
+ ],
+ "figures": [
+  "fig1_per_layer_k5",
+  "fig2_per_layer_k25",
+  "fig3_intervention",
+  "fig3_probe_swap",
+  "fig3_swap_lenses",
+  "figS1_per_layer_k1",
+  "figS2_paired_per_layer",
+  "figS3_edit_norm",
+  "figS4_write_norm"
+ ]
+}

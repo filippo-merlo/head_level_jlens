@@ -1,0 +1,70 @@
+{
+ "meta": {
+  "timestamp": "2026-09-15T22:31:36+00:00",
+  "git": {
+   "sha": "24e36a0489ad77dbed5ad5d5fb0a860da187e023",
+   "dirty": true
+  },
+  "versions": {
+   "torch": "2.13.0+cu130",
+   "transformers": "5.15.0"
+  },
+  "model": "Qwen/Qwen3.5-4B",
+  "lens_key": "qwen3.5-4b",
+  "shards": [
+   "a0",
+   "a1",
+   "a2",
+   "a3"
+  ],
+  "merge": "n_prompts-weighted mean over disjoint corpus slices"
+ },
+ "shards": {
+  "a0": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 0,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n250_a0.pt",
+   "lens_sha256": "4624a11cd0733049c3308af05216318607d9a4293f64f13d3c090e19057d55d5"
+  },
+  "a1": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 250,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n250_a1.pt",
+   "lens_sha256": "0ee138c1013afa3d29045f758522234ecca25740306f92ec5d233eab3ae7af04"
+  },
+  "a2": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 500,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n250_a2.pt",
+   "lens_sha256": "fc842e9e6b35e13cf39243b83b06662dfde73da86ea0022138e9e78b7c947555"
+  },
+  "a3": {
+   "corpus": [
+    1400,
+    0
+   ],
+   "prompt_offset": 750,
+   "prompts_fitted": 250,
+   "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n250_a3.pt",
+   "lens_sha256": "c0871b22b0d2368fde3342019ad338fecfe44ad448aa5cea527a594051a37948"
+  }
+ },
+ "result": {
+  "prompts_fitted": 1000,
+  "n_layers": 8,
+  "lens": "/project/fmerlo/head_level_jlens/results/lenses/qwen3.5-4b_Jzfit_n1000.pt",
+  "lens_sha256": "249929f24139c4f2722645cc0308ff5fd509455240db5890391c369094a74fa6"
+ }
+}
