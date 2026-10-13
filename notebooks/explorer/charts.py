@@ -113,18 +113,20 @@ def head_frame(readings, decode, concept, top_k: int = 5) -> pd.DataFrame:
         for li, layer in enumerate(grid.rows):
             for head in grid.cols:
                 ids = grid.top_ids[li, head, :top_k].tolist()
-                rows.append(
-                    {
-                        "arm": ARM_LABEL[arm],
-                        "layer": layer,
-                        "head": head,
-                        "site": f"L{layer} h{head}",
-                        "top-1": printable(decode(ids[0])),
-                        "top tokens": "  ".join(tok(decode(i)) for i in ids),
-                        "rank": int(ranks[li, head]) + 1 if ranks is not None else None,
-                        "rho": float(readings.rho[li, head]),
-                    }
-                )
+                row = {
+                    "arm": ARM_LABEL[arm],
+                    "layer": layer,
+                    "head": head,
+                    "site": f"L{layer} h{head}",
+                    "top-1": printable(decode(ids[0])),
+                    "top tokens": "  ".join(tok(decode(i)) for i in ids),
+                    "rho": float(readings.rho[li, head]),
+                }
+                # Absent, not None: an all-None column reaches marimo's frontend as an
+                # Arrow null column, which its decoder reads with the next column nulled.
+                if ranks is not None:
+                    row["rank"] = int(ranks[li, head]) + 1
+                rows.append(row)
     return pd.DataFrame(rows)
 
 
@@ -252,17 +254,17 @@ def window_grid(grid, token_strs, decode, position: int, concept: str | None, vo
     rows = []
     for li, layer in enumerate(grid.rows):
         for pi, pos in enumerate(grid.cols):
-            rank = int(grid.target_ranks[li, pi]) + 1 if grid.target_ranks is not None else None
-            rows.append(
-                {
-                    "layer": layer,
-                    "position": f"{pos} {tok(token_strs[pos])}",
-                    "pos": pos,
-                    "top-1": printable(decode(int(grid.top_ids[li, pi, 0]))),
-                    "rank": rank,
-                    "here": pos == position,
-                }
-            )
+            row = {
+                "layer": layer,
+                "position": f"{pos} {tok(token_strs[pos])}",
+                "pos": pos,
+                "top-1": printable(decode(int(grid.top_ids[li, pi, 0]))),
+                "here": pos == position,
+            }
+            # Absent, not None: see head_frame.
+            if grid.target_ranks is not None:
+                row["rank"] = int(grid.target_ranks[li, pi]) + 1
+            rows.append(row)
     data = pd.DataFrame(rows)
     data["label"] = data["top-1"].str.slice(0, 7)
     if concept is not None:

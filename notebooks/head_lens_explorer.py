@@ -180,7 +180,9 @@ def _(mo):
     Readouts are scale-free: the final normalisation rescales a readout's scores without
     reordering them (§2.3), so a head writing very little can still look confident. The
     grids can therefore be shaded by $\rho_{l,h} = \lVert c_{l,h}\rVert / \lVert
-    x^{\mathrm{mid}}_l\rVert$, the size of the head's write against the stream it joins.
+    x^{\mathrm{mid}}_l\rVert$, the size of the head's write against the residual stream
+    just after the attention add, which already contains every head's write. It is a
+    ratio of norms, not a share: heads' values do not add up, and one can exceed 100%.
     $\rho$ is a diagnostic from the code (`src/magnitude.py`), not a quantity the paper
     reports.
     """),
@@ -405,8 +407,9 @@ def _(charts, grid_ui, head_cells, lens, mo, reading, shade_concept):
         [
             mo.md(f"#### One site, three readouts — L{_layer} h{_head}, {_why}"),
             mo.md(
-                f"This head wrote **{reading.rho[reading.layers.index(_layer), _head]:.1%}** of "
-                "the residual stream it joined. Values are logits (before the softmax). "
+                f"This head's write is **{reading.rho[reading.layers.index(_layer), _head]:.1%}** "
+                "the norm of the residual stream after the attention add. Values are logits "
+                "(before the softmax). "
                 "J-layer reads the whole block output at the same layer, not this head."
             ),
             mo.md(charts.inspector_md(reading, lens.decode, _layer, _head, shade_concept)),
